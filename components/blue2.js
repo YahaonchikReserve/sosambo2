@@ -170,6 +170,7 @@ const Blue2 = (props) => {
             height: 19px;
             align-self: center;
             object-fit: cover;
+            transition: transform 0.2s ease, filter 0.2s ease;
           }
           .blue2-text4 {
             fill: #4ec8ed;
@@ -344,15 +345,15 @@ const Blue2 = (props) => {
 
             .blue2-container4:hover {
               transform: translateY(-2px);
-              background-color: rgba(78, 200, 237, 0.1);
             }
 
             .blue2-container4:hover .blue2-text4 {
-              color: #87ceeb !important;
-              fill: #87ceeb !important;
+              color: #3A9BC1 !important;
+              fill: #3A9BC1 !important;
             }
 
             .blue2-container4:hover .blue2-image {
+              transform: rotate(15deg);
               filter: brightness(1.2);
             }
 

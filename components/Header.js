@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <>
-      {/* Изолированный контейнер для хедера */}
+      {/* Изолированный контейн��р для хедера */}
       <div className="header-component">
         <header className="frame1196-container101">
           <div className="frame1196-container102">
@@ -288,7 +288,7 @@ const Header = () => {
             color: #87ceeb !important;
           }
 
-          /* Глобальные стили для стиральной машины на мобильных */
+          /* Глобальные стили для сти��альной машины на мобильных */
           @media (max-width: 479px) {
             .frame1196-image10.washing-machine-wrapper {
               position: absolute !important;
@@ -310,7 +310,68 @@ const Header = () => {
       </style>
       <style jsx>
         {`
-          /* У��икальный контейнер компонента */
+          /* 📞 Анимация #1: "Incoming Call" (Входящий звонок) - АКТИВНА */
+          @keyframes phoneAnimation {
+            0%, 100% {
+              transform: scale(1) rotate(0deg);
+              filter: brightness(1) drop-shadow(0 0 0 rgba(78, 200, 237, 0.7));
+            }
+            25% {
+              transform: scale(1.1) rotate(-3deg);
+              filter: brightness(1.1) drop-shadow(0 0 5px rgba(78, 200, 237, 0.5));
+            }
+            50% {
+              transform: scale(1.2) rotate(3deg);
+              filter: brightness(1.2) drop-shadow(0 0 10px rgba(78, 200, 237, 0.3));
+            }
+            75% {
+              transform: scale(1.1) rotate(-3deg);
+              filter: brightness(1.1) drop-shadow(0 0 5px rgba(78, 200, 237, 0.5));
+            }
+          }
+
+          /* 🏀 Анимация #2: "Bounce Ring" (Прыгающий звонок)
+          @keyframes phoneAnimationBounce {
+            0%, 95%, 100% { transform: translateY(0) scale(1); }
+            85% { transform: translateY(-8px) scale(1.05); }
+            90% { transform: translateY(-4px) scale(1.02); }
+          }
+          */
+
+          /* 📳 Анимация #3: "Vibrate Alert" (Вибрация)
+          @keyframes phoneAnimationVibrate {
+            0%, 95%, 100% { transform: translateX(0) rotate(0deg); }
+            85% { transform: translateX(-2px) rotate(-1deg); }
+            87% { transform: translateX(2px) rotate(1deg); }
+            89% { transform: translateX(-1px) rotate(-0.5deg); }
+            91% { transform: translateX(1px) rotate(0.5deg); }
+            93% { transform: translateX(0) rotate(0deg); }
+          }
+          */
+
+          /* ✨ Анимация #4: "Glow Pulse" (Светящаяся пульсация)
+          @keyframes phoneAnimationGlow {
+            0%, 100% {
+              filter: brightness(1) drop-shadow(0 0 0 rgba(78, 200, 237, 0.5));
+              transform: scale(1);
+            }
+            50% {
+              filter: brightness(1.3) drop-shadow(0 0 12px rgba(78, 200, 237, 0.8));
+              transform: scale(1.05);
+            }
+          }
+          */
+
+          /* 💃 Анимация #5: "Swing Dance" (Танцевальное покачивание)
+          @keyframes phoneAnimationSwing {
+            0%, 100% { transform: rotate(0deg) translateY(0); }
+            25% { transform: rotate(5deg) translateY(-2px); }
+            50% { transform: rotate(0deg) translateY(-4px); }
+            75% { transform: rotate(-5deg) translateY(-2px); }
+          }
+          */
+
+          /* Уникальный контейнер компонента */
           .header-component {
             width: 100%;
           }
@@ -388,6 +449,7 @@ const Header = () => {
           .frame1196-image11 {
             width: 200px;
             object-fit: cover;
+            animation: phoneAnimation 5s infinite;
           }
           .frame1196-obshiy {
             gap: var(--dl-layout-space-threeunits);
@@ -493,6 +555,7 @@ const Header = () => {
             height: 32px;
             align-self: center;
             object-fit: cover;
+            animation: phoneAnimation 5s infinite;
           }
           .frame1196-container109 {
             gap: var(--dl-layout-space-unit);
@@ -741,7 +804,7 @@ const Header = () => {
             color: #87ceeb !important;
           }
 
-          /* Стили для контактной информации в sidebar */
+          /* Стили ��ля контактной информации в sidebar */
           .frame1196-sidebar-contact {
             padding: 0 20px 20px 20px;
             margin-top: 30px;
@@ -765,6 +828,7 @@ const Header = () => {
             width: 24px;
             height: 24px;
             object-fit: cover;
+            animation: phoneAnimation 5s infinite;
           }
 
           .frame1196-sidebar-phone-numbers {
@@ -841,6 +905,7 @@ const Header = () => {
             .frame1196-image11 {
               width: 30px;
               object-fit: cover;
+              animation: phoneAnimation 5s infinite;
             }
             .frame1196-burger-menu {
               display: flex;
@@ -870,6 +935,7 @@ const Header = () => {
             .frame1196-image11 {
               width: 30px;
               object-fit: cover;
+              animation: phoneAnimation 5s infinite;
             }
           }
 
@@ -936,6 +1002,7 @@ const Header = () => {
               width: 28px;
               height: 26px;
               object-fit: cover;
+              animation: phoneAnimation 5s infinite;
             }
             .frame1196-burger-menu {
               width: 30px;
@@ -970,6 +1037,7 @@ const Header = () => {
             .frame1196-image11 {
               width: 28px;
               height: 26px;
+              animation: phoneAnimation 5s infinite;
             }
             .frame1196-burger-menu {
               width: 30px;

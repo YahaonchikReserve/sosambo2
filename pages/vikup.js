@@ -1127,7 +1127,7 @@ const Vikup = (props) => {
             min-width: auto;
             align-items: center;
             border-radius: var(--dl-layout-radius-imageradius);
-            margin-bottom: 30px;
+            margin-bottom: 100px;
             flex-direction: row;
             justify-content: center;
           }
@@ -1440,12 +1440,13 @@ const Vikup = (props) => {
               width: auto;
               height: auto;
               max-width: 300px;
+              margin-bottom: 100px;
             }
           }
           @media (max-width: 767px) {
             .page1-main-posle-hedera {
               flex-direction: column-reverse;
-              background-image: noneo;
+              background-image: none;
             }
             .page1-container11 {
               width: 100%;
@@ -1500,6 +1501,7 @@ const Vikup = (props) => {
             .page1-main-posle-hedera {
               padding-top: 12px;
               flex-direction: column-reverse;
+              background-image: none;
             }
             .page1-container12 {
               flex-wrap: wrap;
@@ -1573,6 +1575,7 @@ const Vikup = (props) => {
             .page1-container23 {
               width: 290px;
               max-width: 290px;
+              margin-bottom: 100px;
             }
             .page1-container24 {
               height: auto;
