@@ -101,7 +101,7 @@ const Page = (props) => {
                 ></circle>
               </svg>
               <strong className="page-text14">
-                <span>У стиральной машины не открывается дверца:</span>
+                <span>У стирал��ной машины не открывается дверца:</span>
                 <br></br>
               </strong>
               <ul className="page-ul list">
@@ -269,7 +269,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка во время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит соответствующая пиктограмма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимите защиту.
+                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка в�� время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит соответствующая пиктограмма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимите защиту.
                 </p>
               </div>
             </section>
@@ -339,7 +339,7 @@ const Page = (props) => {
               <div className="page-container23">
                 <figure className="page-container24">
                   <img
-                    alt="Прессостат"
+                    alt="��рессостат"
                     src="/2/presso.webp"
                     loading="lazy"
                     className="page-image38230524"
@@ -581,7 +581,7 @@ const Page = (props) => {
               <h2 className="page-text50">Когда вызывать мастера?</h2>
               <p className="page-text51">
                 <span className="page-text52">
-                  Если вы выполнили все рекомендации, но проблема осталась —
+                  Если вы выполнили все рекомендации, но проблема оста��ась —
                   обратитесь в сервис
                   <span
                     dangerouslySetInnerHTML={{
@@ -617,7 +617,7 @@ const Page = (props) => {
                   strokeDasharray="11 11"
                 ></path>
               </svg>
-              <strong className="page-text58">Работаем без выходных</strong>
+              <strong className="page-text58">Работаем без выходны��</strong>
               <div className="page-container28">
                 <div className="page-container29">
                   <div className="page-container30">
@@ -2599,26 +2599,6 @@ const Page = (props) => {
               font-size: 14px;
             }
 
-            .vicetext {
-              color: rgb(40, 40, 40);
-              font-size: 14.5px;
-              width: 100%;
-              height: auto;
-              align-self: stretch;
-              text-align: left;
-              font-family: 'Roboto';
-              font-weight: 400;
-              line-height: 1.6;
-              font-stretch: normal;
-              margin: 0;
-              padding: 0;
-            }
-
-            @media (max-width: 767px) {
-              .vicetext {
-                font-size: 14px;
-              }
-            }
           }
         `}
       </style>
