@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import AskButton from './AskButton'
+import OrderButton from './OrderButton'
 
-const QuestionModal = ({ isOpen, onClose }) => {
-  const [formData, setFormData] = useState({ question: '', phone: '' })
+const ReviewModal = ({ isOpen, onClose }) => {
+  const [formData, setFormData] = useState({ name: '', review: '', rating: 5 })
+  const [hoverRating, setHoverRating] = useState(0)
 
   useEffect(() => {
     if (isOpen) {
@@ -18,7 +19,7 @@ const QuestionModal = ({ isOpen, onClose }) => {
   }, [isOpen])
 
   const closeModal = () => {
-    setFormData({ question: '', phone: '' })
+    setFormData({ name: '', review: '', rating: 5 })
     onClose()
   }
 
@@ -29,13 +30,25 @@ const QuestionModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     if (e) e.preventDefault()
-    if (formData.question.trim() && formData.phone.trim()) {
+    if (formData.name.trim() && formData.review.trim()) {
       // Здесь можно добавить логику отправки данных
-      alert(`Вопрос принят! Мастер свяжется с вами в ближайшее время.\nВопрос: ${formData.question}\nТелефон: ${formData.phone}`)
+      alert(`Отзыв принят! Спасибо за обратную связь.\nИмя: ${formData.name}\nОценка: ${formData.rating} звёзд\nОтзыв: ${formData.review}`)
       closeModal()
     } else {
       alert('Пожалуйста, заполните все поля')
     }
+  }
+
+  const handleStarClick = (rating) => {
+    setFormData(prev => ({ ...prev, rating }))
+  }
+
+  const handleStarHover = (rating) => {
+    setHoverRating(rating)
+  }
+
+  const handleStarLeave = () => {
+    setHoverRating(0)
   }
 
   if (!isOpen) return null
@@ -45,39 +58,55 @@ const QuestionModal = ({ isOpen, onClose }) => {
       <div className="modal-overlay" onClick={closeModal}>
         <div className="modal-content" onClick={(e) => e.stopPropagation()}>
           <div className="modal-header">
-            <h2>Спросить Мастера</h2>
+            <h2>Добавить отзыв</h2>
             <button className="modal-close" onClick={closeModal}>×</button>
           </div>
           <div className="modal-body">
             <p className="modal-description">
-              Остались вопросы? Задайте их нашему мастеру бесплатно! 
-              Укажите ваш вопрос и номер телефона. Наш спец��алист свяжется с вами и даст подробную консультацию.
+              Поделитесь своим опытом! Ваш отзыв поможет другим клиентам сделать правильный выбор. 
+              Расскажите о качестве ремонта и уровне сервиса.
             </p>
-            <form onSubmit={handleSubmit} className="question-form">
+            <form onSubmit={handleSubmit} className="review-form">
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  placeholder="Ваше имя"
+                  className="form-input"
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label className="rating-label">Оценка:</label>
+                <div className="star-rating">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <span
+                      key={star}
+                      className={`star ${star <= (hoverRating || formData.rating) ? 'filled' : ''}`}
+                      onClick={() => handleStarClick(star)}
+                      onMouseEnter={() => handleStarHover(star)}
+                      onMouseLeave={handleStarLeave}
+                    >
+                      ★
+                    </span>
+                  ))}
+                </div>
+              </div>
               <div className="form-group">
                 <textarea
-                  name="question"
-                  value={formData.question}
+                  name="review"
+                  value={formData.review}
                   onChange={handleInputChange}
-                  placeholder="Напишите ваш вопрос"
+                  placeholder="Напишите ваш отзыв"
                   className="form-textarea"
                   rows="4"
                   required
                 />
               </div>
-              <div className="form-group">
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  placeholder="Номер телефона"
-                  className="form-input"
-                  required
-                />
-              </div>
               <div className="submit-wrapper">
-                <AskButton onClick={handleSubmit} variant="primary" />
+                <OrderButton onClick={handleSubmit} variant="primary" />
               </div>
             </form>
           </div>
@@ -172,7 +201,7 @@ const QuestionModal = ({ isOpen, onClose }) => {
           font-family: 'Nunito', sans-serif;
         }
 
-        .question-form {
+        .review-form {
           display: flex;
           flex-direction: column;
           gap: 25px;
@@ -183,6 +212,37 @@ const QuestionModal = ({ isOpen, onClose }) => {
           display: flex;
           flex-direction: column;
         }
+
+        .rating-label {
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #333;
+          font-family: 'Nunito', sans-serif;
+        }
+
+        .star-rating {
+          display: flex;
+          gap: 5px;
+          margin-top: 8px;
+        }
+
+        .star {
+          font-size: 30px;
+          cursor: pointer;
+          color: #ddd;
+          transition: all 0.3s ease;
+          user-select: none;
+        }
+
+        .star:hover {
+          transform: scale(1.1);
+        }
+
+        .star.filled {
+          color: #5FCDEE;
+        }
+
 
         .form-input {
           padding: 20px;
@@ -272,4 +332,4 @@ const QuestionModal = ({ isOpen, onClose }) => {
   )
 }
 
-export default QuestionModal
+export default ReviewModal

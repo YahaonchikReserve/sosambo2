@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import OrderButton from './OrderButton'
 
 const OrderModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({ name: '', phone: '' })
@@ -27,7 +28,7 @@ const OrderModal = ({ isOpen, onClose }) => {
   }
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    if (e) e.preventDefault()
     if (formData.name.trim() && formData.phone.trim()) {
       // Здесь можно добавить логику отправки данных
       alert(`Заявка принята! Мастер свяжется с вами в ближайшее время.\nИмя: ${formData.name}\nТелефон: ${formData.phone}`)
@@ -75,9 +76,9 @@ const OrderModal = ({ isOpen, onClose }) => {
                   required
                 />
               </div>
-              <button type="submit" className="submit-button">
-                ВЫЗВАТЬ МАСТЕРА
-              </button>
+              <div className="submit-wrapper">
+                <OrderButton onClick={handleSubmit} variant="primary" />
+              </div>
             </form>
           </div>
         </div>
@@ -133,6 +134,7 @@ const OrderModal = ({ isOpen, onClose }) => {
           font-size: 28px;
           font-weight: bold;
           color: #333;
+          font-family: 'Nunito', sans-serif;
         }
 
         .modal-close {
@@ -167,6 +169,7 @@ const OrderModal = ({ isOpen, onClose }) => {
           line-height: 1.6;
           color: #666;
           margin-bottom: 40px;
+          font-family: 'Nunito', sans-serif;
         }
 
         .order-form {
@@ -189,6 +192,7 @@ const OrderModal = ({ isOpen, onClose }) => {
           background-color: #f9f9f9;
           transition: all 0.3s ease;
           outline: none;
+          font-family: 'Nunito', sans-serif;
         }
 
         .form-input:focus {
@@ -200,32 +204,13 @@ const OrderModal = ({ isOpen, onClose }) => {
         .form-input::placeholder {
           color: #999;
           font-size: 16px;
+          font-family: 'Nunito', sans-serif;
         }
 
-        .submit-button {
-          background-color: #191818;
-          color: white;
-          border: none;
-          padding: 20px 40px;
-          font-size: 18px;
-          font-weight: bold;
-          border-radius: 8px;
-          cursor: pointer;
+        .submit-wrapper {
           margin-top: 20px;
-          transition: all 0.3s ease;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-        }
-
-        .submit-button:hover {
-          background-color: #333;
-          transform: translateY(-2px);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .submit-button:active {
-          transform: translateY(0);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          display: flex;
+          justify-content: center;
         }
 
         /* Адаптивность для мобильных устройств */
@@ -262,9 +247,8 @@ const OrderModal = ({ isOpen, onClose }) => {
             font-size: 16px;
           }
 
-          .submit-button {
-            padding: 15px 30px;
-            font-size: 16px;
+          .submit-wrapper {
+            margin-top: 15px;
           }
         }
       `}</style>

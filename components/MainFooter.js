@@ -93,9 +93,9 @@ const MainFooter = () => {
             </div>
             <div className="frame1196-container237">
               <iframe
-                src="https://www.google.com/maps?q=пл. Независимости, 1, Одесса, Одесская область, 65000&amp;output=embed"
-                address="пл. Независимости, 1, Одесса, Одесская область, 65000"
+                src="https://www.google.com/maps?q=%D0%BF%D0%BB.%20%D0%9D%D0%B5%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%2C%201%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%B0%2C%20%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%2065000&output=embed"
                 className="frame1196-google-maps"
+                title="Карта местоположения"
               ></iframe>
             </div>
           </div>
@@ -389,6 +389,10 @@ const MainFooter = () => {
             font-stretch: normal;
             margin-bottom: var(--dl-layout-space-unit);
             text-decoration: none;
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
           }
 
           .frame1196-text292 {

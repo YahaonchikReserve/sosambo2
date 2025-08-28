@@ -1,21 +1,21 @@
 import React from 'react'
 
-const OrderButton = ({ onClick, className = '', variant = 'primary' }) => {
+const AskButton = ({ onClick, className = '', variant = 'primary' }) => {
   return (
     <button 
       type="button" 
-      className={`order-button ${variant} ${className}`} 
+      className={`ask-button ${variant} ${className}`} 
       onClick={onClick}
     >
       <span
         dangerouslySetInnerHTML={{
-          __html: 'Заказать мастера',
+          __html: 'Спросить мастера',
         }}
       ></span>
 
       <style jsx>
         {`
-          .order-button {
+          .ask-button {
             color: rgb(255, 255, 255);
             font-size: 16px;
             font-style: normal;
@@ -31,7 +31,7 @@ const OrderButton = ({ onClick, className = '', variant = 'primary' }) => {
             overflow: hidden;
           }
 
-          .order-button.primary {
+          .ask-button.primary {
             width: 100%;
             height: 100%;
             max-width: 350px;
@@ -41,7 +41,7 @@ const OrderButton = ({ onClick, className = '', variant = 'primary' }) => {
             min-height: 55px;
           }
 
-          .order-button.footer {
+          .ask-button.footer {
             width: 100%;
             height: 100%;
             max-width: 330px;
@@ -51,19 +51,19 @@ const OrderButton = ({ onClick, className = '', variant = 'primary' }) => {
             min-height: 55px;
           }
 
-          .order-button:hover {
+          .ask-button:hover {
             box-shadow: 5px 5px 15px 0px rgba(43, 43, 43, 0.8);
             transform: translateY(-2px);
             background-color: #87ceeb;
           }
 
-          .order-button:active {
+          .ask-button:active {
             transform: translateY(0px);
             box-shadow: 0px 0px 8px 0px #87ceeb, 3px 3px 8px 0px rgba(43, 43, 43, 0.9);
           }
 
           @media (max-width: 767px) {
-            .order-button.footer {
+            .ask-button.footer {
               min-height: 50px;
             }
           }
@@ -73,4 +73,4 @@ const OrderButton = ({ onClick, className = '', variant = 'primary' }) => {
   )
 }
 
-export default OrderButton
+export default AskButton

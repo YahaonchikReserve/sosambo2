@@ -64,7 +64,7 @@ const Header = () => {
               className="frame1196-image11"
             />
             <div
-              className="frame1196-burger-menu"
+              className={`frame1196-burger-menu ${isMenuOpen ? 'frame1196-burger-open' : ''}`}
               onClick={toggleMenu}
             >
               <div className="frame1196-burger-line"></div>
@@ -280,7 +280,7 @@ const Header = () => {
 
       <style jsx global>
         {`
-          /* Глобальные стили для принуждения цвета в sidebar */
+          /* Глобальные стили для принужде��ия цвета в sidebar */
           .frame1196-sidebar-nav a {
             color: white !important;
           }
@@ -593,6 +593,7 @@ const Header = () => {
             justify-content: space-around;
             cursor: pointer;
             padding: 5px;
+            position: relative;
           }
 
           .frame1196-burger-line {
@@ -601,6 +602,24 @@ const Header = () => {
             background-color: white;
             border-radius: 2px;
             transition: all 0.3s ease;
+            transform-origin: center;
+          }
+
+          /* Анимация бургер меню */
+          .frame1196-burger-open .frame1196-burger-line {
+            background-color: #5FCDEE;
+          }
+
+          .frame1196-burger-open .frame1196-burger-line:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+          }
+
+          .frame1196-burger-open .frame1196-burger-line:nth-child(2) {
+            opacity: 0;
+          }
+
+          .frame1196-burger-open .frame1196-burger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
           }
 
           /* Стили для боковой панели */
@@ -666,7 +685,7 @@ const Header = () => {
           }
 
           .frame1196-sidebar-nav {
-            padding: 40px 20px;
+            padding: 40px 20px 20px 20px;
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -675,7 +694,7 @@ const Header = () => {
           .frame1196-sidebar-link {
             color: white !important;
             text-decoration: none !important;
-            font-size: 18px;
+            font-size: 15px;
             font-family: 'Roboto';
             font-weight: 500;
             padding: 15px 20px;
@@ -725,14 +744,19 @@ const Header = () => {
           /* Стили для контактной информации в sidebar */
           .frame1196-sidebar-contact {
             padding: 0 20px 20px 20px;
-            margin-top: auto;
+            margin-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
           }
 
           .frame1196-sidebar-phones {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             margin-bottom: 20px;
           }
@@ -751,7 +775,7 @@ const Header = () => {
 
           .frame1196-sidebar-phone {
             color: white;
-            font-size: 14px;
+            font-size: 16px;
             font-family: 'Roboto';
             font-weight: 400;
             letter-spacing: 1px;
@@ -760,15 +784,17 @@ const Header = () => {
           .frame1196-sidebar-address {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 8px;
           }
 
           .frame1196-sidebar-address-text {
             color: white;
-            font-size: 12px;
+            font-size: 14px;
             font-family: 'Roboto';
             font-weight: 300;
             line-height: 1.4;
+            text-align: center;
           }
 
           .frame1196-sidebar-address-bold {
@@ -781,9 +807,10 @@ const Header = () => {
 
           .frame1196-sidebar-schedule {
             color: white;
-            font-size: 12px;
+            font-size: 14px;
             font-family: 'Roboto';
             font-weight: 300;
+            text-align: center;
           }
 
           .frame1196-sidebar-schedule-bold {
