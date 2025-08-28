@@ -2,15 +2,31 @@ import React from 'react'
 import Head from 'next/head'
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
+import SEOHead from '../components/SEOHead'
+import { getSEOData } from '../utils/seoConfig'
+import { getServiceData, getLocalBusinessData } from '../utils/structuredData'
 
 const Vikup = (props) => {
+  const seoData = getSEOData('/vikup')
+  const baseUrl = 'https://remstirmash.od.ua'
+  const serviceData = getServiceData(
+    'Выкуп б/у стиральных машин',
+    'Выкупаем б/у стиральные машины в Одессе дорого. Любые марки и состояние.',
+    `${baseUrl}/vikup`
+  )
+  const localBusinessData = getLocalBusinessData(`${baseUrl}/vikup`)
+  const structuredData = [serviceData, localBusinessData]
+
   return (
     <>
       <div className="page1-container10">
-        <Head>
-          <title>Page1 - Pesky Trusty Pony</title>
-          <meta property="og:title" content="Page1 - Pesky Trusty Pony" />
-        </Head>
+        <SEOHead
+          title={seoData.title}
+          description={seoData.description}
+          keywords={seoData.keywords}
+          canonical={`${baseUrl}/vikup`}
+          structuredData={structuredData}
+        />
         <Header />
         <div className="page1-headertextwashermachine">
           <img

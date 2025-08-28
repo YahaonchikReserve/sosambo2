@@ -11,6 +11,10 @@ import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import OrderModal from '../components/OrderModal'
 import QuestionModal from '../components/QuestionModal'
+import OrderButton from '../components/OrderButton'
+import SEOHead from '../components/SEOHead'
+import { getSEOData } from '../utils/seoConfig'
+import { getMainPageStructuredData } from '../utils/structuredData'
 
 const Frame1196 = (props) => {
   const [activeFAQ, setActiveFAQ] = useState(1)
@@ -77,28 +81,30 @@ const Frame1196 = (props) => {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  const seoData = getSEOData('/')
+  const baseUrl = 'https://remstirmash.od.ua'
+  const structuredData = getMainPageStructuredData(baseUrl)
+
   return (
     <>
       <main className="frame1196-container100">
-        <Head>
-          <title>Ремо��т стиральных машин в Одессе</title>
-        </Head>
+        <SEOHead
+          title={seoData.title}
+          description={seoData.description}
+          keywords={seoData.keywords}
+          canonical={baseUrl}
+          structuredData={structuredData}
+        />
         <Header />
 
         <section className="frame1196-container111">
           <div className="frame1196-container112">
             <h1 className="frame1196-text108">
-              <span>Ремонт стираль��ых машин </span>
+              <span>Ремонт стираль����х машин </span>
               <span className="frame1196-text110">в </span>
               <span className="frame1196-text111">Одессе!</span>
             </h1>
-            <button type="button" className="frame1196-button1 button" onClick={openModal}>
-              <span
-                dangerouslySetInnerHTML={{
-                  __html: 'Заказать мастера',
-                }}
-              ></span>
-            </button>
+            <OrderButton onClick={openModal} variant="primary" />
           </div>
           <article className="frame1196-cards">
             <Link href="/neslivaetvodu">
@@ -351,7 +357,7 @@ const Frame1196 = (props) => {
                 </svg>
               </div>
               <img
-                alt="С��иральная машина не крутит барабан"
+                alt="С��иральная машина не крут��т барабан"
                 src="/problems/10-300h.webp"
                 loading="eager"
                 className="frame1196-image24"
@@ -375,7 +381,7 @@ const Frame1196 = (props) => {
             </span>
             <br className="frame1196-text129" />
             <span className="frame1196-text130">Просто ��озвоните или </span>
-            <span className="frame1196-text131">оставьте заявку</span>
+            <span className="frame1196-text131">остав��те заявку</span>
             <span className="frame1196-text132">, и мы вам перез��оним.</span>
           </p>
           <div className="frame1196-container124">
@@ -456,7 +462,7 @@ const Frame1196 = (props) => {
                 <strong className="frame1196-text133">
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: 'Бесплатный выезд',
+                      __html: 'Б��сплатный выезд',
                     }}
                   ></span>
                 </strong>
@@ -1180,7 +1186,7 @@ const Frame1196 = (props) => {
                   <span className="frame1196-text183">
                     <span
                       dangerouslySetInnerHTML={{
-                        __html: 'Зам��на щеток двигателя (с учето�� стоимости щеток)',
+                        __html: 'Зам��на щеток двигателя (с у��ето�� стоимости щеток)',
                       }}
                     ></span>
                   </span>
@@ -1780,7 +1786,7 @@ const Frame1196 = (props) => {
               </div>
               <div className="item">
                 <img
-                  alt="Р��монт стиральных машин Ardo в О��ессе - проф��ссион��л��н��й сервис"
+                  alt="Р��монт стиральных машин Ardo в О��ессе - проф��ссион��л��н��й се��вис"
                   src="/brands/image%203823123-200h.webp"
                   loading="eager"
                   className="frame1196-image38"
@@ -3108,7 +3114,7 @@ to {transform: translateX(-2620px);}}
             <div className="frame1196-container193">
               <div className="frame1196-container194">
                 <figcaption className="frame1196-text233">
-                  ��амена втулки крест��вины на LG
+                  ��амена втулк�� крест��вины на LG
                 </figcaption>
               </div>
             </div>
@@ -3381,7 +3387,7 @@ to {transform: translateX(-2620px);}}
               >
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'С��олько стоит диагностика?',
+                    __html: 'С��олько стои�� диагностика?',
                   }}
                 ></span>
               </h3>
@@ -3444,7 +3450,7 @@ to {transform: translateX(-2620px);}}
                 <p className="frame1196-text246">
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: 'Масте�� возит базовый набор популярных запчастей. Для редких моделей заказываем ����������ли за 1-2 дня. Проверя��м наличие по телефону зар��нее.',
+                      __html: 'Масте�� возит ��азовый набор популярных запчастей. Для редких моделей заказываем ����������ли за 1-2 дня. Проверя��м наличие по телефону зар��нее.',
                     }}
                   ></span>
                 </p>
@@ -3489,7 +3495,7 @@ to {transform: translateX(-2620px);}}
               >
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Дешевле отремонтироват�� ��ли заменить?',
+                    __html: 'Де��евле отремонтироват�� ��ли заменить?',
                   }}
                 ></span>
               </h3>
@@ -3597,7 +3603,7 @@ to {transform: translateX(-2620px);}}
             <span className="textglavitogi frame1196-text250">
               <span
                 dangerouslySetInnerHTML={{
-                  __html: 'Ремонт стира��ьны���� машин в сервисном цент��е "Ваше Н��звание" в Одессе',
+                  __html: 'Ремонт ��тира��ьны���� машин в сервисном цент��е "Ваше Н��звание" в Одессе',
                 }}
               ></span>
             </span>
@@ -3605,7 +3611,7 @@ to {transform: translateX(-2620px);}}
           <p className="frame1196-text251 textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Стиральная машина — это техника, ко��орая должна работать исправно: отжимать, стирать и радовать стабильнос��ью. Но на практике даже самая над��жная техника со временем требует внимания. Механическ��е детали изнаш��ваются, электроника даёт сбои, а бытовая нагрузка делает своё дело. Вот почему ремонт стиральных машин в Одессе — это не просто разовая ус��уга, а реальна�� необходимость для большинства владельцев. Важно доверить ремонт проверенным специалистам, а не случайному маст��ру.',
+                __html: 'Стиральная машина — это техника, ко��орая должна работать исправно: отжимать, стирать и радовать стабильнос��ью. Но на практике даже самая над��жная техника со временем требует внимания. Механическ��е детали изнаш��ваются, электроника даёт сбои, а ��ытовая нагрузка делает своё дело. Вот почему ремонт стиральных машин в Одессе — это не просто разовая ус��уга, а реальна�� необходимость для большинства владельцев. Важно доверить ремонт проверенным специалистам, а не случайному маст��ру.',
               }}
             ></span>
           </p>
@@ -3637,7 +3643,7 @@ to {transform: translateX(-2620px);}}
               <span className="textITOGI">
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Ра��отаем напрямую с поставщиками — без переплат и посредников.',
+                    __html: 'Ра��отаем напрямую с поставщиками — без переплат и посредн��ков.',
                   }}
                 ></span>
               </span>
@@ -3680,7 +3686,7 @@ to {transform: translateX(-2620px);}}
           <p className="frame1196-text260 textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Ремонт стиральных машин в Одессе необходим как новым, так и давно использованным моделям. Все узлы техники имеют ограниченный ресурс, и при активной эксплуатации однажды выходят из строя. Мы собрали самые частые причины, по которым клиенты обращаются в наш сервис:',
+                __html: 'Ремонт стиральных машин в Одессе необходим как новым, так и давно ис��ользованным моделям. Все узлы техники имеют ограниченный ресурс, и при активной эксплуатации однажды выходят из строя. Мы собрали самые частые причины, по которым клиенты обращаются в наш сервис:',
               }}
             ></span>
           </p>
@@ -3725,7 +3731,7 @@ to {transform: translateX(-2620px);}}
               <span className="textITOGI">
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Не г��еет воду — диагностика и з��мена ТЭНа.',
+                    __html: 'Не г��еет воду — диагностика �� з��мена ТЭНа.',
                   }}
                 ></span>
               </span>
@@ -3766,7 +3772,7 @@ to {transform: translateX(-2620px);}}
           <h2 className="textglavitogi">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Серви��ная ��астерская',
+                __html: 'Серви��ная ��а��терская',
               }}
             ></span>
           </h2>
@@ -3787,7 +3793,7 @@ to {transform: translateX(-2620px);}}
           <p className="textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Ниже на сайте — карта проезда к нашей мастер��к��й, а также наши телефоны. Звоните для записи, консультации или если заметили сбои в работе вашей стиральной машины. Мы всё объясним, рассчитаем стоимость и поможем."Ваше название" — это ремонт стиральных машин в Одессе быстро, надёжно и профессио���ально.',
+                __html: 'Ниже на сайте — карта проезда к нашей мастер��к��й, а также наши телефоны. Звоните для записи, консультации или если з��метили сбои в работе вашей стиральной машины. Мы всё объясним, рассчитаем стоимость и поможем."Ваше название" — это ремонт стиральных машин в Одессе быстро, надёжно и профессио���ально.',
               }}
             ></span>
           </p>
@@ -4138,7 +4144,7 @@ to {transform: translateX(-2620px);}}
               src="/external/frame10708949-1dvi.svg"
               className="frame1196-frame10703"
             />
-            <p className="frame1196-text280">Мне похуй</p>
+            <p className="frame1196-text280">Мне п��хуй</p>
             <svg
               width="330"
               xmlns="http://www.w3.org/2000/svg"
@@ -11810,7 +11816,7 @@ to {transform: translateX(-2620px);}}
             transition: filter 0.3s ease !important;
           }
 
-          /* Дополнительные hover эффекты для текста и иконок в кнопках */
+          /* Дополнительные hover эффекты для текста и иконок в ��нопках */
           .frame1196-container136:hover .frame1196-text146,
           .frame1196-container140:hover .frame1196-text150,
           .frame1196-container144:hover .frame1196-text154,

@@ -3,15 +3,29 @@ import Head from 'next/head'
 
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
+import SEOHead from '../components/SEOHead'
+import { getSEOData } from '../utils/seoConfig'
+import { getProblemPageStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
+  const seoData = getSEOData('/neotkrivaetsadverca')
+  const baseUrl = 'https://remstirmash.od.ua'
+  const structuredData = getProblemPageStructuredData(
+    'Ремонт заблокированной дверцы стиральной машины',
+    'Профессиональный ремонт заблокированной дверцы стиральной машины в Одессе. Ремонт замка люка, разблокировка.',
+    `${baseUrl}/neotkrivaetsadverca`
+  )
+
   return (
     <>
       <div className="page-container10">
-        <Head>
-          <title>Pesky Trusty Pony</title>
-          <meta property="og:title" content="Pesky Trusty Pony" />
-        </Head>
+        <SEOHead
+          title={seoData.title}
+          description={seoData.description}
+          keywords={seoData.keywords}
+          canonical={`${baseUrl}/neotkrivaetsadverca`}
+          structuredData={structuredData}
+        />
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
@@ -269,7 +283,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка в�� время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит соответствующая пиктограмма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимите защиту.
+                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка в�� время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит ��оответствующая пиктограмма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимите защиту.
                 </p>
               </div>
             </section>

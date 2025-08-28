@@ -3,15 +3,29 @@ import Head from 'next/head'
 
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
+import SEOHead from '../components/SEOHead'
+import { getSEOData } from '../utils/seoConfig'
+import { getProblemPageStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
+  const seoData = getSEOData('/silnoshumit')
+  const baseUrl = 'https://remstirmash.od.ua'
+  const structuredData = getProblemPageStructuredData(
+    'Ремонт шумной стиральной машины',
+    'Професс��ональный ремонт стиральных машин которые шумят и вибрируют в Одессе. Замена подшипников, амортизаторов.',
+    `${baseUrl}/silnoshumit`
+  )
+
   return (
     <>
       <div className="page-container10">
-        <Head>
-          <title>Pesky Trusty Pony</title>
-          <meta property="og:title" content="Pesky Trusty Pony" />
-        </Head>
+        <SEOHead
+          title={seoData.title}
+          description={seoData.description}
+          keywords={seoData.keywords}
+          canonical={`${baseUrl}/silnoshumit`}
+          structuredData={structuredData}
+        />
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
@@ -291,7 +305,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  При первой установке нов��й стиральной машины многие удивляются сильной вибрации и шуму во ��ремя работы. Чаще всего это связано с тем, что ��стаются установочные транспортировочные болты, фиксирующие барабан для безопасной перевозки. Если их не снять до запуска, барабан не сможет свободно вращаться, что вызывает громкий грохот, подпрыгивание машины и риск повреждения деталей. Чтобы техника работала корректно и служила долго, обязатель��о выкрутите все транспортировочные болты и установите защитные заглушки.
+                  При первой установке нов��й стиральной машины многие удивляются сильной вибрации и шуму во ��ремя работы. Чаще всего это связано с тем, что ��стаются установочные транспортировочные болты, фиксирующие барабан для безопасной перевозки. Если их не снять до запуска, барабан не сможет свободно вращаться, что вызывает громкий грохот, подпрыгивание машины и риск повреждения деталей. Чтобы техника ра��отала корректно и служила долго, обязатель��о выкрутите все транспортировочные болты и установите защитные заглушки.
                 </p>
               </div>
             </section>
@@ -843,7 +857,7 @@ const Page = (props) => {
               </div>
               <div className="page-frame12982">
                 <span className="page-text74">
-                  Как продлить жизнь машине на 3–5 лет — простые привычки,
+                  Как продлить жизнь машин�� на 3–5 лет — простые привычки,
                   которые сэкономят деньги
                 </span>
                 <div className="page-container46"></div>

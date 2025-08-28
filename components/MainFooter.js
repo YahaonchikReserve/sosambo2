@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import OrderButton from './OrderButton'
+import OrderModal from './OrderModal'
 
 const MainFooter = () => {
   const router = useRouter()
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
 
   // Проверяем, является ли текущая страница страницей проблемы
   const isProblemPage = router.pathname && (
@@ -78,13 +89,7 @@ const MainFooter = () => {
                   }}
                 ></span>
               </strong>
-              <button type="button" className="frame1196-button5 button">
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: 'Заказать мастера',
-                  }}
-                ></span>
-              </button>
+              <OrderButton onClick={openModal} variant="footer" />
             </div>
             <div className="frame1196-container237">
               <iframe
@@ -590,6 +595,8 @@ const MainFooter = () => {
           }
         `}
       </style>
+
+      <OrderModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   )
 }

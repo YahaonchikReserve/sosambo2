@@ -3,15 +3,29 @@ import Head from 'next/head'
 
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
+import SEOHead from '../components/SEOHead'
+import { getSEOData } from '../utils/seoConfig'
+import { getProblemPageStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
+  const seoData = getSEOData('/nekrutitbaraban')
+  const baseUrl = 'https://remstirmash.od.ua'
+  const structuredData = getProblemPageStructuredData(
+    'Ремонт стиральной машины которая не крутит барабан',
+    'Профессиональный ремонт стиральных машин с неработающим барабаном в Одессе. Замена ремня, ремонт двигателя.',
+    `${baseUrl}/nekrutitbaraban`
+  )
+
   return (
     <>
       <div className="page-container10">
-        <Head>
-          <title>Pesky Trusty Pony</title>
-          <meta property="og:title" content="Pesky Trusty Pony" />
-        </Head>
+        <SEOHead
+          title={seoData.title}
+          description={seoData.description}
+          keywords={seoData.keywords}
+          canonical={`${baseUrl}/nekrutitbaraban`}
+          structuredData={structuredData}
+        />
         <Header />
         <main className="page-main">
           <div className="page-left-main-box">
@@ -273,7 +287,7 @@ const Page = (props) => {
                     Выключите стиральную машину и отключите её от сети. Слейте
                     воду из барабана с помощью аварийного шланга или через
                     фильтр (если таковой имеется). Это необходимо сделать перед
-                    любыми проверками, чтобы вода не помешала осмотру и не
+                    любыми проверками, ч��обы вода не помешала осмотру и не
                     повредила пол под машиной.
                   </p>
 
@@ -835,7 +849,7 @@ const Page = (props) => {
                   className="page-image38230324"
                 />
                 <span className="page-text71">
-                  Как правильно стирать пуховик в автоматической стиральной
+                  Как правильно стирать п��ховик в автоматической стиральной
                   машине?
                 </span>
               </div>
