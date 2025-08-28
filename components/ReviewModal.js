@@ -63,7 +63,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
           </div>
           <div className="modal-body">
             <p className="modal-description">
-              Поделитесь своим опытом! Ваш отзыв поможет другим клиентам сделать правильный выбор. 
+              Поделитесь ��воим опытом! Ваш отзыв поможет другим клиентам сделать прав��льный выбор. 
               Расскажите о качестве ремонта и уровне сервиса.
             </p>
             <form onSubmit={handleSubmit} className="review-form">
@@ -106,7 +106,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                 />
               </div>
               <div className="submit-wrapper">
-                <OrderButton onClick={handleSubmit} variant="primary" />
+                <OrderButton onClick={handleSubmit} variant="primary" text="Добавить отзыв" />
               </div>
             </form>
           </div>
@@ -216,7 +216,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
         .rating-label {
           font-size: 16px;
           font-weight: 600;
-          margin-bottom: 8px;
+          margin-bottom: 5px;
           color: #333;
           font-family: 'Nunito', sans-serif;
         }
@@ -224,7 +224,6 @@ const ReviewModal = ({ isOpen, onClose }) => {
         .star-rating {
           display: flex;
           gap: 5px;
-          margin-top: 8px;
         }
 
         .star {
@@ -294,7 +293,8 @@ const ReviewModal = ({ isOpen, onClose }) => {
             width: 90%;
             height: auto;
             max-height: 90%;
-            margin: 20px;
+            margin: 16px;
+            padding: 20px;
             border-radius: 12px;
             animation: slideInUp 0.3s ease-out;
           }
@@ -310,21 +310,40 @@ const ReviewModal = ({ isOpen, onClose }) => {
 
           .modal-overlay {
             justify-content: center;
-            padding: 20px;
+            padding: 10px;
+          }
+
+          .modal-header {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
           }
 
           .modal-header h2 {
-            font-size: 24px;
+            font-size: 23px;
+          }
+
+          .modal-description {
+            font-size: 15px;
+            margin-bottom: 15px;
+          }
+
+          .review-form {
+            gap: 12px;
           }
 
           .form-input,
           .form-textarea {
-            padding: 15px;
-            font-size: 16px;
+            padding: 11px;
+            font-size: 15px;
+          }
+
+          .form-input::placeholder,
+          .form-textarea::placeholder {
+            font-size: 15px;
           }
 
           .submit-wrapper {
-            margin-top: 15px;
+            margin-top: 10px;
           }
         }
       `}</style>

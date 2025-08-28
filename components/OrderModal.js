@@ -31,7 +31,7 @@ const OrderModal = ({ isOpen, onClose }) => {
     if (e) e.preventDefault()
     if (formData.name.trim() && formData.phone.trim()) {
       // Здесь можно добавить логику отправки данных
-      alert(`Заявка принята! Мастер свяжется с вами в ближайшее время.\nИмя: ${formData.name}\nТелефон: ${formData.phone}`)
+      alert(`Заявка принята! Мастер свяжется с вами в ближайшее вре��я.\nИмя: ${formData.name}\nТелефон: ${formData.phone}`)
       closeModal()
     } else {
       alert('Пожалуйста, заполните все поля')
@@ -219,7 +219,7 @@ const OrderModal = ({ isOpen, onClose }) => {
             width: 90%;
             height: auto;
             max-height: 90%;
-            margin: 20px;
+            margin: 16px;
             border-radius: 12px;
             animation: slideInUp 0.3s ease-out;
           }
@@ -235,20 +235,33 @@ const OrderModal = ({ isOpen, onClose }) => {
 
           .modal-overlay {
             justify-content: center;
-            padding: 20px;
+            padding: 16px;
           }
 
           .modal-header h2 {
-            font-size: 24px;
+            font-size: 23px;
+          }
+
+          .modal-description {
+            font-size: 15px;
+            margin-bottom: 36px;
+          }
+
+          .order-form {
+            gap: 21px;
           }
 
           .form-input {
-            padding: 15px;
-            font-size: 16px;
+            padding: 11px;
+            font-size: 15px;
+          }
+
+          .form-input::placeholder {
+            font-size: 15px;
           }
 
           .submit-wrapper {
-            margin-top: 15px;
+            margin-top: 16px;
           }
         }
       `}</style>

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-
+import Link from 'next/link'
 import PropTypes from 'prop-types'
 
 const Blue2 = (props) => {
@@ -22,19 +22,37 @@ const Blue2 = (props) => {
               )}
             </span>
           </div>
-          <strong className="blue2-text2">
-            {props.text ?? (
-              <Fragment>
-                <span className="blue2-text6">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: 'Text',
-                    }}
-                  ></span>
-                </span>
-              </Fragment>
-            )}
-          </strong>
+          {props.clickableTitle && props.titleLink ? (
+            <Link href={props.titleLink}>
+              <strong className="blue2-text2 clickable-service-title">
+                {props.text ?? (
+                  <Fragment>
+                    <span className="blue2-text6">
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: 'Text',
+                        }}
+                      ></span>
+                    </span>
+                  </Fragment>
+                )}
+              </strong>
+            </Link>
+          ) : (
+            <strong className={`blue2-text2 ${!props.clickableTitle ? 'normal-service-title' : ''}`}>
+              {props.text ?? (
+                <Fragment>
+                  <span className="blue2-text6">
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: 'Text',
+                      }}
+                    ></span>
+                  </span>
+                </Fragment>
+              )}
+            </strong>
+          )}
         </div>
         <div className="blue2-container3">
           <p className="blue2-text3">
@@ -140,6 +158,19 @@ const Blue2 = (props) => {
             font-style: normal;
             font-family: 'Noto Serif SC';
             font-weight: 300;
+          }
+
+          .clickable-service-title {
+            cursor: pointer;
+            transition: color 0.3s ease;
+          }
+
+          .clickable-service-title:hover {
+            opacity: 0.8;
+          }
+
+          .normal-service-title {
+            color: var(--dl-color-theme-neutral-dark) !important;
           }
           .blue2-container3 {
             gap: var(--dl-layout-space-oneandhalfunits);
@@ -375,6 +406,8 @@ Blue2.defaultProps = {
   text1: undefined,
   imageSrc: '/ICONS/29.svg',
   onClick: undefined,
+  clickableTitle: false,
+  titleLink: null,
 }
 
 Blue2.propTypes = {
@@ -385,6 +418,8 @@ Blue2.propTypes = {
   text1: PropTypes.element,
   imageSrc: PropTypes.string,
   onClick: PropTypes.func,
+  clickableTitle: PropTypes.bool,
+  titleLink: PropTypes.string,
 }
 
 export default Blue2

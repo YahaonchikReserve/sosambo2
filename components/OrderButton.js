@@ -1,15 +1,15 @@
 import React from 'react'
 
-const OrderButton = ({ onClick, className = '', variant = 'primary' }) => {
+const OrderButton = ({ onClick, className = '', variant = 'primary', text = 'Заказать мастера' }) => {
   return (
-    <button 
-      type="button" 
-      className={`order-button ${variant} ${className}`} 
+    <button
+      type="button"
+      className={`order-button ${variant} ${className}`}
       onClick={onClick}
     >
       <span
         dangerouslySetInnerHTML={{
-          __html: 'Заказать мастера',
+          __html: text,
         }}
       ></span>
 

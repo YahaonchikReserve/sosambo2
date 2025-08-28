@@ -23,7 +23,7 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  // Проверяем, являе��ся ли текущая страница страницей проблемы
+  // Проверяем, явля�����ся ли текущая страница страницей проблемы
   const isProblemPage = router.pathname && (
     router.pathname.includes('NESLIVAETIVODU') ||
     router.pathname.includes('NEGREETIVODU') ||
@@ -48,13 +48,15 @@ const Header = () => {
                 width={isMobile ? 141 : 95}
                 height={isMobile ? 141 : 92}
               />
-              <span className="frame1196-text100">
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: 'Ваше название',
-                  }}
-                ></span>
-              </span>
+              <Link href="/">
+                <span className="frame1196-text100 clickable-title">
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: 'Ваше название',
+                    }}
+                  ></span>
+                </span>
+              </Link>
             </div>
           </div>
           <div className="frame1196-container104">
@@ -434,6 +436,15 @@ const Header = () => {
             font-weight: 300;
             white-space: normal;
             letter-spacing: 1.5px;
+          }
+
+          .clickable-title {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+          }
+
+          .clickable-title:hover {
+            opacity: 0.8;
           }
           .frame1196-image10 {
             width: 95px;

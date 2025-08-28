@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-
+import Link from 'next/link'
 import PropTypes from 'prop-types'
 
 const Blue1 = (props) => {
@@ -14,7 +14,7 @@ const Blue1 = (props) => {
                   <span className="blue1-text7">
                     <span
                       dangerouslySetInnerHTML={{
-                        __html: translate.raw('text_LYVo7P'),
+                        __html: '5',
                       }}
                     ></span>
                   </span>
@@ -22,19 +22,37 @@ const Blue1 = (props) => {
               )}
             </span>
           </div>
-          <strong className="blue1-text2">
-            {props.text ?? (
-              <Fragment>
-                <span className="blue1-text6">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: translate.raw('text_GpdHnn'),
-                    }}
-                  ></span>
-                </span>
-              </Fragment>
-            )}
-          </strong>
+          {props.clickableTitle && props.titleLink ? (
+            <Link href={props.titleLink}>
+              <strong className="blue1-text2 clickable-service-title">
+                {props.text ?? (
+                  <Fragment>
+                    <span className="blue1-text6">
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: 'Ремонт модуля управления',
+                        }}
+                      ></span>
+                    </span>
+                  </Fragment>
+                )}
+              </strong>
+            </Link>
+          ) : (
+            <strong className={`blue1-text2 ${!props.clickableTitle ? 'normal-service-title' : ''}`}>
+              {props.text ?? (
+                <Fragment>
+                  <span className="blue1-text6">
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: 'Ремонт модуля управления',
+                      }}
+                    ></span>
+                  </span>
+                </Fragment>
+              )}
+            </strong>
+          )}
         </div>
         <div className="blue1-container3">
           <p className="blue1-text3">
@@ -43,7 +61,7 @@ const Blue1 = (props) => {
                 <span className="blue1-text8">
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: translate.raw('text_pyA0mR'),
+                      __html: 'от 1000 грн',
                     }}
                   ></span>
                 </span>
@@ -92,7 +110,7 @@ const Blue1 = (props) => {
                   <span className="blue1-text5">
                     <span
                       dangerouslySetInnerHTML={{
-                        __html: translate.raw('text_kDI4Iz'),
+                        __html: 'Вызвать мастера',
                       }}
                     ></span>
                   </span>
@@ -140,6 +158,19 @@ const Blue1 = (props) => {
             font-style: normal;
             font-family: 'Noto Serif SC';
             font-weight: 300;
+          }
+
+          .clickable-service-title {
+            cursor: pointer;
+            transition: color 0.3s ease;
+          }
+
+          .clickable-service-title:hover {
+            opacity: 0.8;
+          }
+
+          .normal-service-title {
+            color: var(--dl-color-theme-neutral-dark) !important;
           }
           .blue1-container3 {
             gap: var(--dl-layout-space-oneandhalfunits);
@@ -373,6 +404,8 @@ Blue1.defaultProps = {
   imageAlt: 'image',
   text1: undefined,
   onClick: undefined,
+  clickableTitle: false,
+  titleLink: null,
 }
 
 Blue1.propTypes = {
@@ -384,6 +417,8 @@ Blue1.propTypes = {
   imageAlt: PropTypes.string,
   text1: PropTypes.element,
   onClick: PropTypes.func,
+  clickableTitle: PropTypes.bool,
+  titleLink: PropTypes.string,
 }
 
 export default Blue1

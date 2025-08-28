@@ -612,7 +612,7 @@
  
 .textITOGI {
   color: #343434;
-  font-size: 16px;
+  font-size: 14.5px;
   font-style: normal;
   font-family: nunito;
   font-weight: 500;
@@ -620,7 +620,7 @@
 
 .textglavitogi {
   color: var(--dl-color-theme-neutral-dark);
-  font-size: 23px;
+  font-size: 21px;
   font-style: normal;
   font-family: "nunito";
   font-weight: 550;

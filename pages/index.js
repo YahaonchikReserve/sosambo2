@@ -121,7 +121,7 @@ const Frame1196 = (props) => {
             <Link href="/neslivaetvodu">
               <a className="frame1196-container113">
                 <h3 className="frame1196-text112">
-                  Стиральная машина не сливает воду
+                  Ст��ральная машина не сливает воду
                 </h3>
                 <div className="frame1196-arrow10">
                   <svg
@@ -368,7 +368,7 @@ const Frame1196 = (props) => {
                 </svg>
               </div>
               <img
-                alt="С��иральная машина не крут��т бараба��"
+                alt="С����иральная машина не крут��т бараба��"
                 src="/problems/10-300h.webp"
                 loading="eager"
                 className="frame1196-image24"
@@ -863,6 +863,7 @@ const Frame1196 = (props) => {
             </div>
             <Blue2
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text155">
@@ -910,6 +911,7 @@ const Frame1196 = (props) => {
             ></Blue2>
             <Blue1
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text159">
@@ -957,6 +959,7 @@ const Frame1196 = (props) => {
             ></Blue1>
             <Blue2
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text163">
@@ -1004,6 +1007,8 @@ const Frame1196 = (props) => {
             ></Blue2>
             <Blue1
               onClick={openModal}
+              clickableTitle={true}
+              titleLink="/neslivaetvodu"
               text={
                 <Fragment>
                   <span className="frame1196-text167">
@@ -1051,6 +1056,7 @@ const Frame1196 = (props) => {
             ></Blue1>
             <Blue2
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text171">
@@ -1098,6 +1104,7 @@ const Frame1196 = (props) => {
             ></Blue2>
             <Blue1
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text175">
@@ -1145,6 +1152,8 @@ const Frame1196 = (props) => {
             ></Blue1>
             <Blue2
               onClick={openModal}
+              clickableTitle={true}
+              titleLink="/negreetvodu"
               text={
                 <Fragment>
                   <span className="frame1196-text179">
@@ -1192,6 +1201,7 @@ const Frame1196 = (props) => {
             ></Blue2>
             <Blue1
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text183">
@@ -1239,6 +1249,7 @@ const Frame1196 = (props) => {
             ></Blue1>
             <Blue2
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text187">
@@ -1286,6 +1297,7 @@ const Frame1196 = (props) => {
             ></Blue2>
             <Blue1
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text191">
@@ -1302,7 +1314,7 @@ const Frame1196 = (props) => {
                   <span className="frame1196-text192">
                     <span
                       dangerouslySetInnerHTML={{
-                        __html: 'от 500 ��рн',
+                        __html: 'от 500 ���рн',
                       }}
                     ></span>
                   </span>
@@ -1333,6 +1345,8 @@ const Frame1196 = (props) => {
             ></Blue1>
             <Blue2
               onClick={openModal}
+              clickableTitle={true}
+              titleLink="/silnoshumit"
               text={
                 <Fragment>
                   <span className="frame1196-text195">
@@ -1380,6 +1394,7 @@ const Frame1196 = (props) => {
             ></Blue2>
             <Blue1
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text199">
@@ -1427,6 +1442,7 @@ const Frame1196 = (props) => {
             ></Blue1>
             <Blue2
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text203">
@@ -1474,6 +1490,7 @@ const Frame1196 = (props) => {
             ></Blue2>
             <Blue1
               onClick={openModal}
+              clickableTitle={false}
               text={
                 <Fragment>
                   <span className="frame1196-text207">
@@ -1773,7 +1790,7 @@ const Frame1196 = (props) => {
               </div>
               <div className="item">
                 <img
-                  alt="Ремонт стиральных машин Candy в Одессе - профессиональный сервис"
+                  alt="��емонт стиральных машин Candy в Одессе - профессиональный сервис"
                   src="/brands/candy-logo%202-200h.webp"
                   loading="eager"
                   className="frame1196-image35"
@@ -1797,7 +1814,7 @@ const Frame1196 = (props) => {
               </div>
               <div className="item">
                 <img
-                  alt="Р��монт стиральных машин Ardo в О��ессе - проф��ссион��л��н��й се��вис"
+                  alt="Р��монт стиральных машин Ardo в О��ессе - проф��ссион����л��н��й се��вис"
                   src="/brands/image%203823123-200h.webp"
                   loading="eager"
                   className="frame1196-image38"
@@ -1869,7 +1886,7 @@ const Frame1196 = (props) => {
               </div>
               <div className="item">
                 <img
-                  alt="Ремонт стиральных машин Whirlpool в Одессе - профессио���ал��ный сервис"
+                  alt="Ремонт стиральных машин Whirlpool в Одессе - профессио�����л��ный сервис"
                   src="/brands/whirlpool-logo%201-200h.webp"
                   loading="eager"
                   className="frame1196-image47"
@@ -2043,7 +2060,7 @@ to {transform: translateX(-2620px);}}
                     <h3 className="frame1196-text218">
                       <span
                         dangerouslySetInnerHTML={{
-                          __html: 'Со����ременное оборуд��вание по диагностике',
+                          __html: 'Со����р��менное оборуд��вание по диагностике',
                         }}
                       ></span>
                     </h3>
@@ -2481,7 +2498,7 @@ to {transform: translateX(-2620px);}}
                 <p className="frame1196-text223">
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: 'Выполняем работу качественно и до��тупно, без скрытых доплат и ненужных расходов.',
+                      __html: 'Выполняем работу качественно �� до��тупно, без скрытых доплат и ненужных расходов.',
                     }}
                   ></span>
                 </p>
@@ -3118,7 +3135,7 @@ to {transform: translateX(-2620px);}}
             <div className="frame1196-container191">
               <div className="frame1196-container192">
                 <figcaption className="frame1196-text232">
-                  Устано��ка новой ��тулки уплотнит��ля
+                  Устано���ка новой ��тулки уплотнит��ля
                 </figcaption>
               </div>
             </div>
@@ -3515,7 +3532,7 @@ to {transform: translateX(-2620px);}}
                 <p className="frame1196-text248">
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: 'Если стоимость р��мо��та превышает 60% от цены новой ����шины - ��учше заменить. Мы всегда честно консультиру��м ���� целесообразно���ти ��ем��нт��.',
+                      __html: 'Если стоимость р��мо���та превышает 60% от цены новой ����шины - ��учше заменить. Мы всегда честно консультиру��м ���� целесообразно���ти ��ем��нт��.',
                     }}
                   ></span>
                 </p>
@@ -3618,14 +3635,14 @@ to {transform: translateX(-2620px);}}
           <p className="frame1196-text251 textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Стиральная машина — это те��ника, ко��орая должна работать исправно: отжимать, стирать и радовать стабильнос��ью. Но на практике даже самая над��жная техника со временем требует внимания. Механическ��е детали изнаш��ваются, электроника даёт сбои, а ��ыто��ая нагрузка делает своё дело. Вот почему ремонт стиральных машин в Одессе — э��о не просто разовая ус��уга, а реальна�� необходимость для большинства владельцев. Важно доверить ремонт проверенным специалистам, а не случайному маст��ру.',
+                __html: 'Стиральная машина — это те��ника, ко��орая должна работать исправно: отжимать, стирать и радовать стабильнос��ью. Н�� на практике даже самая над��жная техника со времен��м требует внимания. Механическ��е детали изнаш��ваются, электроника даёт сбои, а ��ыто��ая нагрузка делает своё дело. Вот почему ремонт стиральных машин в Одессе — э��о не просто разовая ус��уга, а реальна�� необходимость для большинства владельцев. Важно доверить ремонт проверенным специалистам, а не случайному маст��ру.',
               }}
             ></span>
           </p>
           <p className="frame1196-text252 textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Под брендом "Ваше Название"&nbsp;работа��т команда масте��ов, каждый из которых занимается ремонтом сти��альных машин боле�� семи лет. Мы обучались у лучших, прошли серт��фикацию, п��сещали техкурсы и накопили опыт работы с техникой любых поколений. Сегодня мы предлагаем ремонт стиральных машин в Одессе с гарантией, использованием оригинальных запчастей и вниманием к каждой д��тали. В нашем распоряжении — профессионально оснащённая мастерская, скл��д комплектующих и выездной сервис. Мы нахо��им даже редкие детали и точно знаем, как продлить жи��нь вашей технике.',
+                __html: 'Под брендом "Ваше Название"&nbsp;работа��т команда масте��ов, каждый из которых занимается ремонтом сти��альных машин боле�� семи лет. Мы обучались у лучших, прошли серт��фикацию, п��сещали техкурсы и накопили опыт работы с техникой любых поколений. Сегодня мы предлагаем ремонт стиральных машин в Одессе с гарантией, использованием оригинальных запчасте�� и вниманием к каждой д��тали. В нашем распоряжении — профессионально оснащённая мастерская, скл��д комплектующих и выездной сервис. Мы нахо��им даже редкие детали и точно знаем, как продлить жи��нь вашей технике.',
               }}
             ></span>
           </p>
@@ -3702,7 +3719,7 @@ to {transform: translateX(-2620px);}}
               <span className="textITOGI">
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Машина не слива��т ����ду — пробл��ма с помпой или засор сл����вной с���стемы.',
+                    __html: 'Машина не слива��т ����ду — пробл��ма с помпой или засор с������вной с���стемы.',
                   }}
                 ></span>
               </span>
@@ -3729,7 +3746,7 @@ to {transform: translateX(-2620px);}}
               <span className="textITOGI">
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Т��чёт корпус — уст����няе�� утечки, заменяем шланги, м��нжеты, п��т��убки.',
+                    __html: 'Т��чёт корпус — уст����няе�� утечки, заменяем шланги, м��нжеты, ����т��убки.',
                   }}
                 ></span>
               </span>
@@ -3786,7 +3803,7 @@ to {transform: translateX(-2620px);}}
           <p className="frame1196-text271 textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Сервисный центр "Ваше название"&nbsp;— это современная профессиональная мастерская в Одессе, гд�� выполняются все виды ремонта: от быстрой замены деталей до полн��го восстановления после серьёзных поломок. Мы берёмся за любую тех��ику: от массовых моделей до премиум-с��гмента.В��полняем замену амортизато��ов, подшипников, сл��вных насосов, управляющих модулей, датчиков, ТЭ��о��. Также восстанавливаем герметичность, меняем люки, устраняем вибрации и посторонние шумы. Проводим профилактику и г��убокую чистку бараб��на и бака.Каждый ремонт начинается с диагностики — мастер объясняет, в чём проблема, и предлагает решение. Только после согласования с клиентом мы приступаем к рабо��е. Мы ценим доверие и работаем аккуратно — без спешки и халтуры.',
+                __html: 'Сервисный центр "Ваше название"&nbsp;— это современная профессиональная мастерская в Одессе, гд�� выполняются все виды ремонта: от быстрой замены де��алей до полн��го восстановления после серьёзных поломок. ��ы берёмся за любую тех��ику: от массовых моделей до премиум-с��гмента.В��полняем замену амортизато��ов, подшипников, сл��вных насосов, управляющих модулей, датчиков, ТЭ��о��. Также восстанавливаем герметичность, меняем люки, устраняем вибрации и посторонние шумы. Проводим профилактику и г��убокую чистку бараб��на и бака.Каждый ремонт начинается с диагностики — мастер объясняет, в чём проблема, и предлагает решение. Только после согласования с клиентом мы приступаем к рабо��е. Мы ценим доверие и работаем аккуратно — без спешки и халтуры.',
               }}
             ></span>
           </p>
@@ -4001,7 +4018,7 @@ to {transform: translateX(-2620px);}}
               &quot;Я считаю это победа над стиральной м��шино���, которой 12
               лет))  О��ень круто!! ����лаг����дарю!! Она пала в руки мастера и
               отдала��ь ем�� полностью, а н�� ст��ла бры��ать����. ��е зна��, что он т��м
-              с ней делал, но сейчас он�� к��к шелковая стира��т мой ситцев���е
+              с ней делал, но сейчас он�� к��к шелковая стира��т мо�� ситцев���е
               кружевно��� бел��е&lt;3&quot;
             </p>
             <svg
@@ -5104,7 +5121,7 @@ to {transform: translateX(-2620px);}}
               max-width: 100%;
             }
 
-            /* Уменьшение ��азмера шрифта карточек на м��бильных экранах */
+            /* У��еньшение ��азмера шрифта карточек на м��бильных экранах */
             .frame1196-text112,
             .frame1196-text113,
             .frame1196-text114,
@@ -5726,9 +5743,8 @@ to {transform: translateX(-2620px);}}
             display: inline-block;
           }
           .frame1196-text159 {
-            color: rgb(78, 200, 237);
+            color: var(--dl-color-theme-neutral-dark);
             display: inline-block;
-            text-decoration: underline;
           }
           .frame1196-text160 {
             display: inline-block;
@@ -5921,11 +5937,10 @@ to {transform: translateX(-2620px);}}
             font-weight: 500;
           }
           .frame1196-text212 {
-            color: #58c3e8;
+            color: var(--dl-color-theme-neutral-dark);
             font-style: normal;
             font-family: 'Noto Serif SC';
             font-weight: 300;
-            text-decoration: underline;
           }
           .frame1196-container147 {
             gap: var(--dl-layout-space-oneandhalfunits);

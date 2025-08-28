@@ -51,7 +51,7 @@ const QuestionModal = ({ isOpen, onClose }) => {
           <div className="modal-body">
             <p className="modal-description">
               Остались вопросы? Задайте их нашему мастеру бесплатно! 
-              Укажите ваш вопрос и номер телефона. Наш спец��алист свяжется с вами и даст подробную консультацию.
+              Укажите ваш вопрос и номер телефона. Наш спец��алист свяжется с вами и даст подробную консул��тацию.
             </p>
             <form onSubmit={handleSubmit} className="question-form">
               <div className="form-group">
@@ -234,7 +234,7 @@ const QuestionModal = ({ isOpen, onClose }) => {
             width: 90%;
             height: auto;
             max-height: 90%;
-            margin: 20px;
+            margin: 16px;
             border-radius: 12px;
             animation: slideInUp 0.3s ease-out;
           }
@@ -250,21 +250,35 @@ const QuestionModal = ({ isOpen, onClose }) => {
 
           .modal-overlay {
             justify-content: center;
-            padding: 20px;
+            padding: 16px;
           }
 
           .modal-header h2 {
-            font-size: 24px;
+            font-size: 23px;
+          }
+
+          .modal-description {
+            font-size: 15px;
+            margin-bottom: 36px;
+          }
+
+          .question-form {
+            gap: 21px;
           }
 
           .form-input,
           .form-textarea {
-            padding: 15px;
-            font-size: 16px;
+            padding: 11px;
+            font-size: 15px;
+          }
+
+          .form-input::placeholder,
+          .form-textarea::placeholder {
+            font-size: 15px;
           }
 
           .submit-wrapper {
-            margin-top: 15px;
+            margin-top: 16px;
           }
         }
       `}</style>
