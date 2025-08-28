@@ -80,7 +80,7 @@ const Blue1 = (props) => {
               strokeDasharray="11 11"
             ></path>
           </svg>
-          <div className="blue1-container4">
+          <div className="blue1-container4" onClick={props.onClick}>
             <img
               alt={props.imageAlt}
               src={props.imageSrc}
@@ -328,6 +328,33 @@ const Blue1 = (props) => {
               font-family: Noto Serif SC;
               justify-content: center;
               text-decoration: underline none;
+              transition: color 0.3s ease, transform 0.2s ease;
+            }
+
+            /* Hover эффекты для кнопки "Вызвать мастера" */
+            .blue1-container4 {
+              cursor: pointer;
+              transition: transform 0.2s ease, background-color 0.2s ease;
+              border-radius: 4px;
+              padding: 4px;
+            }
+
+            .blue1-container4:hover {
+              transform: translateY(-2px);
+              background-color: rgba(78, 200, 237, 0.1);
+            }
+
+            .blue1-container4:hover .blue1-text4 {
+              color: #87ceeb !important;
+              fill: #87ceeb !important;
+            }
+
+            .blue1-container4:hover .blue1-image {
+              filter: brightness(1.2);
+            }
+
+            .blue1-container4:active {
+              transform: translateY(0);
             }
           }
         `}
@@ -344,6 +371,7 @@ Blue1.defaultProps = {
   imageSrc: '/ICONS/29.svg',
   imageAlt: 'image',
   text1: undefined,
+  onClick: undefined,
 }
 
 Blue1.propTypes = {
@@ -354,6 +382,7 @@ Blue1.propTypes = {
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
   text1: PropTypes.element,
+  onClick: PropTypes.func,
 }
 
 export default Blue1

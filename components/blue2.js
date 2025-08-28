@@ -80,7 +80,7 @@ const Blue2 = (props) => {
               strokeDasharray="11 11"
             ></path>
           </svg>
-          <div className="blue2-container4">
+          <div className="blue2-container4" onClick={props.onClick}>
             <img
               alt={props.imageAlt}
               src={props.imageSrc}
@@ -331,6 +331,33 @@ const Blue2 = (props) => {
               font-family: Noto Serif SC;
               justify-content: center;
               text-decoration: underline none;
+              transition: color 0.3s ease, transform 0.2s ease;
+            }
+
+            /* Hover эффекты для кнопки "Вызвать мастера" */
+            .blue2-container4 {
+              cursor: pointer;
+              transition: transform 0.2s ease, background-color 0.2s ease;
+              border-radius: 4px;
+              padding: 4px;
+            }
+
+            .blue2-container4:hover {
+              transform: translateY(-2px);
+              background-color: rgba(78, 200, 237, 0.1);
+            }
+
+            .blue2-container4:hover .blue2-text4 {
+              color: #87ceeb !important;
+              fill: #87ceeb !important;
+            }
+
+            .blue2-container4:hover .blue2-image {
+              filter: brightness(1.2);
+            }
+
+            .blue2-container4:active {
+              transform: translateY(0);
             }
           }
         `}
@@ -346,6 +373,7 @@ Blue2.defaultProps = {
   text2: undefined,
   text1: undefined,
   imageSrc: '/ICONS/29.svg',
+  onClick: undefined,
 }
 
 Blue2.propTypes = {
@@ -355,6 +383,7 @@ Blue2.propTypes = {
   text2: PropTypes.element,
   text1: PropTypes.element,
   imageSrc: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default Blue2
