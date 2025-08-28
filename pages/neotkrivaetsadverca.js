@@ -136,7 +136,7 @@ const Page = (props) => {
                     className="page-vector3"
                   />
                   <a href="#3" className="page-link4">
-                    2. Остатки воды в баке или незавершённый цикл
+                    2. Остатки воды в б��ке или незавершённый цикл
                   </a>
                 </li>
                 <li className="page-li5 list-item">
@@ -316,10 +316,6 @@ const Page = (props) => {
                     loading="lazy"
                     className="page-image38230523"
                   />
-                  <span className="page-text40">
-                    <span>Стиралка</span>
-                    <br></br>
-                  </span>
                 </figure>
                 <p className="vicetext">
                   {' '}
@@ -406,7 +402,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text49 vicetext">
                   {' '}
-                  Внезапные перебои с питанием или ошибки в модуле управления могут приводить к «замораживанию» замка люка: контроллер просто не получает и��и не обрабатывает команду на разблокировку. Иногда помогает полная перезагрузка питания, в иных случаях требуется диагностика и ремонт электронной части в сервисном центре.
+                  Внезапные перебои с питанием или ошибки в модуле управления могут приводить к «замораживанию» замка люка: контроллер просто не получает и��и не обрабатывает команду на разблокир��вку. Иногда помогает полная перезагрузка питания, в иных случаях требуется диагностика и ремонт электронной части в сервисном центре.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -418,7 +414,7 @@ const Page = (props) => {
             <section id="5-1" className="page-fiveproblem2">
               <div className="page-container25 zagolovkiskorobkoy">
                 <h3 className="zagolovki2">
-                  5. Механическая поломка замка или ручки.
+                  5. Механическая пол��мка замка или ручки.
                 </h3>
                 <svg
                   width="330"
@@ -439,18 +435,9 @@ const Page = (props) => {
                 </svg>
               </div>
               <div className="page-container26">
-                <figure className="page-container27">
-                  <img
-                    alt="блок управления"
-                    src="/image%203823045-900w.webp"
-                    loading="lazy"
-                    className="page-image38230525"
-                  />
-                  <span className="page-text48">Блок управления</span>
-                </figure>
                 <p className="page-text49 vicetext">
                   {' '}
-                  Износ или поломка механики замка, сломанная ручка или повреждённый фиксатор — частая причина невозможности от��рытия люка. При такой неисправности замок может не фиксироваться или проворачиваться «в холостую», и потребуется замена механизма или ручки: это уже профильная работа для мастера.
+                  Износ или поломка механики з��мка, сломанная ручка или повреждённый фиксатор — частая причина невозможно��ти от��рытия люка. При такой неисправности замок может не фиксироваться или проворачиваться «в холостую», и потребуется замена механизма или ручки: это уже профильная работа для мастера.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -592,10 +579,10 @@ const Page = (props) => {
                   strokeDasharray="11 11"
                 ></path>
               </svg>
-              <h2 className="page-text50">Когда вызывать мастера?</h2>
+              <h2 className="page-text50">Когда вызывать м��стера?</h2>
               <p className="page-text51">
                 <span className="page-text52">
-                  Если вы выполнили все рекомендации, но проблема оста��ась —
+                  Ес��и вы выполнили все рекомендации, но проблема оста��ась —
                   обратитесь в сервис
                   <span
                     dangerouslySetInnerHTML={{
@@ -674,7 +661,7 @@ const Page = (props) => {
                 <div className="page-container35">
                   <h4 className="page-text61">Предидущая</h4>
                   <span className="page-text62">
-                    Стиральная машина не крутит барабан
+                    Стиральная машина не отжимает
                   </span>
                 </div>
               </div>
@@ -695,7 +682,7 @@ const Page = (props) => {
                 <div className="page-container38">
                   <h4 className="page-text63">��ледующ��я</h4>
                   <span className="page-text64">
-                    Стиральная машина не нагревает воду
+                    Стиральная машина протекает
                   </span>
                 </div>
               </div>
@@ -776,7 +763,7 @@ const Page = (props) => {
               <span className="page-text72">Вам будет интересно:</span>
               <div className="page-frame12981">
                 <span className="page-text73">
-                  Ошибки, которые приводят к дорогостоящему ремонту (и как их
+                  Ошибки, котор��е приводят к дорогостоящему ремонту (и как их
                   избежать)
                 </span>
                 <div className="page-container45"></div>
@@ -1323,7 +1310,6 @@ const Page = (props) => {
             margin-left: var(--dl-layout-space-oneandhalfunits);
             flex-direction: column;
             justify-content: center;
-            background-color: rgba(69, 197, 237, 0.1);
           }
           .page-image38230523 {
             float: right;
@@ -1449,7 +1435,6 @@ const Page = (props) => {
             margin-left: var(--dl-layout-space-oneandhalfunits);
             flex-direction: column;
             justify-content: center;
-            background-color: rgba(69, 197, 237, 0.1);
           }
           .page-image38230525 {
             float: right;
