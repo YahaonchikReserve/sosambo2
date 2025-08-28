@@ -10,11 +10,13 @@ import Blue1 from '../components/blue1'
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import OrderModal from '../components/OrderModal'
+import QuestionModal from '../components/QuestionModal'
 
 const Frame1196 = (props) => {
   const [activeFAQ, setActiveFAQ] = useState(1)
   const [isMobile, setIsMobile] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isQuestionModalOpen, setIsQuestionModalOpen] = useState(false)
   const router = useRouter()
 
   // Проверяем, является ли текущая страниц�� страницей проблемы
@@ -40,6 +42,14 @@ const Frame1196 = (props) => {
 
   const closeModal = () => {
     setIsModalOpen(false)
+  }
+
+  const openQuestionModal = () => {
+    setIsQuestionModalOpen(true)
+  }
+
+  const closeQuestionModal = () => {
+    setIsQuestionModalOpen(false)
   }
 
   const scrollLeft = () => {
@@ -78,7 +88,7 @@ const Frame1196 = (props) => {
         <section className="frame1196-container111">
           <div className="frame1196-container112">
             <h1 className="frame1196-text108">
-              <span>Ремонт стиральных машин </span>
+              <span>Ремонт стираль��ых машин </span>
               <span className="frame1196-text110">в </span>
               <span className="frame1196-text111">Одессе!</span>
             </h1>
@@ -300,7 +310,7 @@ const Frame1196 = (props) => {
             <Link href="/neotkrivaetsadverca">
               <a className="frame1196-container121">
                 <h3 className="frame1196-text120">
-                  У стиральной машины не открывается д��ерца
+                  У стиральной машины не открывается д���ерца
                 </h3>
                 <div className="frame1196-arrow18">
                   <svg
@@ -355,7 +365,7 @@ const Frame1196 = (props) => {
             <span className="frame1196-text124">РемСтирМаш</span>
             <span className="frame1196-text125"></span>
             <span className="frame1196-text126">
-              мы заботимся о надёжной работе ваше�� техники во всех уголках
+              мы заботимся о надёжной работе ваше�� т��хники во всех уголках
               Одессы.
             </span>
             <br className="frame1196-text127" />
@@ -1762,7 +1772,7 @@ const Frame1196 = (props) => {
               </div>
               <div className="item">
                 <img
-                  alt="Ремонт стира��ьных м��шин Gorenje в Одессе - п��офессиональн��й ��ервис"
+                  alt="Ремонт ��тира��ьных м��шин Gorenje в Одессе - п��офессиональн��й ��ервис"
                   src="/brands/gorenje-logo%201-200h.webp"
                   loading="eager"
                   className="frame1196-image37"
@@ -1786,7 +1796,7 @@ const Frame1196 = (props) => {
               </div>
               <div className="item">
                 <img
-                  alt="Рем��нт стиральных м���шин Atlant в Одессе - профессиональ��ый сервис"
+                  alt="Рем��нт стиральных м���шин Atlant в Одессе - профессиональ����ый сервис"
                   src="/brands/image%203823126-200h.webp"
                   loading="eager"
                   className="frame1196-image40"
@@ -1794,7 +1804,7 @@ const Frame1196 = (props) => {
               </div>
               <div className="item">
                 <img
-                  alt="��емонт стиральных машин Beko в Од��сс���� - пр����фессиональ��ый ��ерви��"
+                  alt="����емонт стиральных машин Beko в Од��сс���� - пр����фессиональ��ый ��ерви��"
                   src="/brands/image%203823127-200h.webp"
                   loading="eager"
                   className="frame1196-image41"
@@ -2607,7 +2617,7 @@ to {transform: translateX(-2620px);}}
                     <h3 className="frame1196-text224">
                       <span
                         dangerouslySetInnerHTML={{
-                          __html: 'Л����чшие мастера с многолетним ст��жем 7-10 лет',
+                          __html: 'Л����чшие мас��ера с многолетним ст��жем 7-10 лет',
                         }}
                       ></span>
                     </h3>
@@ -3263,7 +3273,7 @@ to {transform: translateX(-2620px);}}
               >
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Сколько времени занимае�� ремонт?',
+                    __html: 'Сколько времени занимае�� ремон��?',
                   }}
                 ></span>
               </h3>
@@ -3326,7 +3336,7 @@ to {transform: translateX(-2620px);}}
                 <p className="frame1196-text242">
                   <span
                     dangerouslySetInnerHTML={{
-                      __html: 'Н�� в��е виды работ даем гарантию 6 месяцев, на ����амене��ные ��а��част�� - 1 год. ���ара��т��йный та��он выдается сразу после завершения ремонта',
+                      __html: 'Н�� в��е виды работ даем гарантию 6 месяцев, на ����ам��не��ные ��а��част�� - 1 год. ���ара��т��йный та��он выдается сразу после завершения ремонта',
                     }}
                   ></span>
                 </p>
@@ -3575,7 +3585,7 @@ to {transform: translateX(-2620px);}}
             ></span>
           </strong>
         </div>
-        <button type="button" className="frame1196-button3 button">
+        <button type="button" className="frame1196-button3 button" onClick={openQuestionModal}>
           <span
             dangerouslySetInnerHTML={{
               __html: 'Спросить Мастера',
@@ -3602,7 +3612,7 @@ to {transform: translateX(-2620px);}}
           <p className="frame1196-text252 textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Под брендом "Ваше Название"&nbsp;работает команда масте��ов, каждый из которых занимается ремонтом сти��альных машин боле�� семи лет. Мы обучались у лучших, прошли серт��фикацию, посещали техкурсы и накопили опыт работы с техникой любых поколений. Сегодня мы предлагаем ремонт стиральных машин в Одессе с гарантией, использованием оригинальных запчастей и вниманием к каждой детали. В нашем распоряжении — профессионально оснащённая мастерская, склад комплектующих и выездной сервис. Мы нахо��им даже редкие детали и точно знаем, как продлить жизнь вашей технике.',
+                __html: 'Под брендом "Ваше Название"&nbsp;работа��т команда масте��ов, каждый из которых занимается ремонтом сти��альных машин боле�� семи лет. Мы обучались у лучших, прошли серт��фикацию, посещали техкурсы и накопили опыт работы с техникой любых поколений. Сегодня мы предлагаем ремонт стиральных машин в Одессе с гарантией, использованием оригинальных запчастей и вниманием к каждой детали. В нашем распоряжении — профессионально оснащённая мастерская, склад комплектующих и выездной сервис. Мы нахо��им даже редкие детали и точно знаем, как продлить жизнь вашей технике.',
               }}
             ></span>
           </p>
@@ -3697,7 +3707,7 @@ to {transform: translateX(-2620px);}}
               <span className="textITOGI">
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Не запускается стирк����� — проверяем моду��ь управления или кнопку пи���ания.',
+                    __html: 'Не запускается стирк����� — пр��веряем моду��ь управления или кнопку пи���ания.',
                   }}
                 ></span>
               </span>
@@ -3733,7 +3743,7 @@ to {transform: translateX(-2620px);}}
               <span className="textITOGI">
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: 'Регулярное техобслуживан���� — профилакти��а раз в 12 месяцев продлевае�� срок службы.',
+                    __html: 'Регулярное техобслуживан���� — профилакти��а раз в 12 месяцев продлевае�� срок с��ужбы.',
                   }}
                 ></span>
               </span>
@@ -3763,7 +3773,7 @@ to {transform: translateX(-2620px);}}
           <p className="frame1196-text271 textITOGI">
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Сервисный центр "Ваше название"&nbsp;— это современная профессиональная мастерская в Одессе, гд�� выполняются все виды ремонта: от быстрой замены деталей до полн��го восстановления после серьёзных поломок. Мы берёмся за любую технику: от массовых моделей до премиум-с��гмента.В��полняем замену амортизато��ов, подшипников, сливных насосов, управляющих модулей, датчиков, ТЭ��ов. Также восстанавливаем герметичность, меняем люки, устраняем вибрации и посторонние шумы. Проводим профилактику и глубокую чистку барабана и бака.Каждый ремонт начинается с диагностики — мастер объясняет, в чём проблема, и предлагает решение. Только после согласования с клиентом мы приступаем к работе. Мы ценим доверие и работаем аккуратно — без спешки и халтуры.',
+                __html: 'Сервисный центр "Ваше название"&nbsp;— это современная профессиональная мастерская в Одессе, гд�� выполняются все виды ремонта: от быстрой замены деталей до полн��го восстановления после серьёзных поломок. Мы берёмся за любую тех��ику: от массовых моделей до премиум-с��гмента.В��полняем замену амортизато��ов, подшипников, сливных насосов, управляющих модулей, датчиков, ТЭ��ов. Также восстанавливаем герметичность, меняем люки, устраняем вибрации и посторонние шумы. Проводим профилактику и глубокую чистку барабана и бака.Каждый ремонт начинается с диагностики — мастер объясняет, в чём проблема, и предлагает решение. Только после согласования с клиентом мы приступаем к работе. Мы ценим доверие и работаем аккуратно — без спешки и халтуры.',
               }}
             ></span>
           </p>
@@ -4266,6 +4276,7 @@ to {transform: translateX(-2620px);}}
         />
 
         <OrderModal isOpen={isModalOpen} onClose={closeModal} />
+        <QuestionModal isOpen={isQuestionModalOpen} onClose={closeQuestionModal} />
 
         <MainFooter />
       </main>

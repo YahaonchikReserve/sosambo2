@@ -251,6 +251,29 @@ const Header = () => {
                 </a>
               </Link>
             </nav>
+            <div className="frame1196-sidebar-contact">
+              <div className="frame1196-sidebar-phones">
+                <img
+                  alt="image"
+                  src="/ICONS/dla%20hedera%20trubka.svg"
+                  className="frame1196-sidebar-phone-icon"
+                />
+                <div className="frame1196-sidebar-phone-numbers">
+                  <span className="frame1196-sidebar-phone">+38 (067) 123-45-67</span>
+                  <span className="frame1196-sidebar-phone">+38 (067) 123-45-67</span>
+                </div>
+              </div>
+              <div className="frame1196-sidebar-address">
+                <span className="frame1196-sidebar-address-text">
+                  <span className="frame1196-sidebar-address-bold">Адрес:</span>
+                  <span className="frame1196-sidebar-address-normal"> пл. Независимости, 1, Одесса, Одесская область, 65000</span>
+                </span>
+                <span className="frame1196-sidebar-schedule">
+                  <span className="frame1196-sidebar-schedule-bold">Пн-Вс:</span>
+                  <span className="frame1196-sidebar-schedule-normal"> 9:00-21:00</span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -697,6 +720,78 @@ const Header = () => {
 
           .frame1196-sidebar-nav a.frame1196-sidebar-link-active:visited {
             color: #87ceeb !important;
+          }
+
+          /* Стили для контактной информации в sidebar */
+          .frame1196-sidebar-contact {
+            padding: 0 20px 20px 20px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+          }
+
+          .frame1196-sidebar-phones {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+          }
+
+          .frame1196-sidebar-phone-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+          }
+
+          .frame1196-sidebar-phone-numbers {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+          }
+
+          .frame1196-sidebar-phone {
+            color: white;
+            font-size: 14px;
+            font-family: 'Roboto';
+            font-weight: 400;
+            letter-spacing: 1px;
+          }
+
+          .frame1196-sidebar-address {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+          }
+
+          .frame1196-sidebar-address-text {
+            color: white;
+            font-size: 12px;
+            font-family: 'Roboto';
+            font-weight: 300;
+            line-height: 1.4;
+          }
+
+          .frame1196-sidebar-address-bold {
+            font-weight: 500;
+          }
+
+          .frame1196-sidebar-address-normal {
+            font-weight: 300;
+          }
+
+          .frame1196-sidebar-schedule {
+            color: white;
+            font-size: 12px;
+            font-family: 'Roboto';
+            font-weight: 300;
+          }
+
+          .frame1196-sidebar-schedule-bold {
+            font-weight: 500;
+          }
+
+          .frame1196-sidebar-schedule-normal {
+            font-weight: 300;
           }
 
           /* Медиа-запросы */
