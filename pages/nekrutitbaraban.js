@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import SEOHead from '../components/SEOHead'
 import PageNavigation from '../components/PageNavigation'
+import OrderButton from '../components/OrderButton'
+import OrderModal from '../components/OrderModal'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
   const seoData = getSEOData('/nekrutitbaraban')
   const baseUrl = 'https://remstirmash.od.ua'
   const structuredData = getProblemPageStructuredData(
@@ -38,7 +49,7 @@ const Page = (props) => {
               />
               <h1 className="page-text10">
                 <span className="page-text11">
-                  Стиральная машина не крутит барабан —
+                  Стиральная машина не ��рутит барабан —
                 </span>
                 <span className="page-text12">
                   <span
@@ -116,7 +127,7 @@ const Page = (props) => {
                 ></circle>
               </svg>
               <strong className="page-text14">
-                <span>Стиральная машина не крутит барабан:</span>
+                <span>Стиральн��я машина не крутит барабан:</span>
                 <br></br>
               </strong>
               <ul className="page-ul list">
@@ -682,7 +693,7 @@ const Page = (props) => {
                 <span className="page-text56">.</span>
                 <span className="page-text57">
                   {' '}
-                  Наши специалисты быс��ро прие��ут к вам в желаемое вами время в
+                  Наши специалисты быс��ро прие��ут к вам в желаемое вами вре��я в
                   любой район Одессы и выполнят качественную диагностику и
                   ремонт.
                 </span>
@@ -724,9 +735,7 @@ const Page = (props) => {
                     <strong className="page-text60">+38 (048) 123-35-21</strong>
                   </div>
                 </div>
-                <button type="button" className="page-button button">
-                  Перезвоните мне
-                </button>
+                <OrderButton onClick={openModal} text="Заказать мастера" />
               </div>
             </section>
             <PageNavigation
@@ -812,7 +821,7 @@ const Page = (props) => {
           </div>
           <div className="page-dops-info">
             <section className="page-frame1299">
-              <span className="page-text72">Вам будет интересно:</span>
+              <span className="page-text72">Вам будет ��нтересно:</span>
               <div className="page-frame12981">
                 <span className="page-text73">
                   Ошибки, которые приводят к дорогостоящему р��монту (и как их
@@ -836,7 +845,7 @@ const Page = (props) => {
               </div>
               <div className="page-frame12984">
                 <span className="page-text76">
-                  Как сэкономить электричество и воду — реаль��ые настройки и
+                  Как сэкономить элект��ичество и воду — реаль��ые настройки и
                   лайфхаки
                 </span>
                 <div className="page-container48"></div>
@@ -857,6 +866,7 @@ const Page = (props) => {
           </div>
         </main>
         <MainFooter />
+        <OrderModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
       <style jsx>
         {`

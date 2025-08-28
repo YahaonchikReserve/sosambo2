@@ -1,14 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import SEOHead from '../components/SEOHead'
 import PageNavigation from '../components/PageNavigation'
+import OrderButton from '../components/OrderButton'
+import OrderModal from '../components/OrderModal'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
   const seoData = getSEOData('/nenabiraetvodu')
   const baseUrl = 'https://remstirmash.od.ua'
   const structuredData = getProblemPageStructuredData(
@@ -303,7 +315,7 @@ const Page = (props) => {
 
                   <p>
                     <strong>3. Осмотрите заливной шланг.</strong><br />
-                    Убедитесь, что на шланг ничего не давит и нет перегибов. Открутите его от машины (не забудьте поставить под него таз) и проверьте, идёт ли из него вода. Если шланг пережат или перекручен, распрямите его или замените.
+                    Убедитесь, что на шланг ничего не давит и нет перегибов. Открутите его от машины (не забудьте поставить под него таз) и проверьте, идёт ли из него вода. Если шл��нг пережат или перекручен, распрямите его или замените.
                   </p>
 
                   <p>
@@ -779,15 +791,13 @@ const Page = (props) => {
                     <strong className="page-text60">+38 (048) 123-35-21</strong>
                   </div>
                 </div>
-                <button type="button" className="page-button button">
-                  Перезвоните мне
-                </button>
+                <OrderButton onClick={openModal} text="Заказать мастера" />
               </div>
             </section>
             <PageNavigation
               prevPage={{
                 href: '/neotjimaet',
-                title: 'Стиральная машина не отжимает'
+                title: 'Стиральна�� машина не отжимает'
               }}
               nextPage={{
                 href: '/neotkrivaetsadverca',
@@ -878,7 +888,7 @@ const Page = (props) => {
               <div className="page-frame12982">
                 <span className="page-text74">
                   Как продлить жизнь машине на 3–5 лет — простые привычки,
-                  которые сэкономят деньги
+                  которые сэкономят день��и
                 </span>
                 <div className="page-container46"></div>
               </div>
@@ -904,7 +914,7 @@ const Page = (props) => {
               </div>
               <div className="page-frame12986">
                 <span className="page-text78">
-                  Мифы о стиралках: что правда, а что — вымысел?
+                  Мифы о стиралках: что ��равда, а что — вымысел?
                 </span>
                 <div className="page-container50"></div>
               </div>
@@ -912,6 +922,7 @@ const Page = (props) => {
           </div>
         </main>
         <MainFooter />
+        <OrderModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
       <style jsx>
         {`

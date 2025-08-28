@@ -133,16 +133,41 @@ const PageNavigation = ({ prevPage, nextPage }) => {
           .page-navigation {
             flex-direction: column;
             gap: var(--dl-layout-space-unit);
+            align-items: center;
           }
 
           .page-nav-container {
             width: 100%;
+            max-width: 320px;
             justify-content: center;
           }
 
+          .page-nav-link {
+            width: 100%;
+            align-items: center;
+            justify-content: flex-start;
+          }
+
+          .page-nav-icon-container {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+          }
+
+          .page-nav-text-container {
+            flex: 1;
+            align-items: flex-start;
+            margin-left: var(--dl-layout-space-unit);
+          }
+
+          .page-nav-title {
+            margin-bottom: 4px;
+          }
+
           .page-nav-subtitle {
-            max-width: 250px;
-            text-align: center;
+            max-width: none;
+            width: 100%;
+            text-align: left;
           }
         }
       `}</style>

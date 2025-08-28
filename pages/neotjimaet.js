@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import SEOHead from '../components/SEOHead'
 import PageNavigation from '../components/PageNavigation'
+import OrderButton from '../components/OrderButton'
+import OrderModal from '../components/OrderModal'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
   const seoData = getSEOData('/neotjimaet')
   const baseUrl = 'https://remstirmash.od.ua'
   const structuredData = getProblemPageStructuredData(
@@ -418,7 +429,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Если ��атчик неправильно определяет уровень воды, блок управления не срабатывает нормально. При этом машинка может «зависать» перед отжимом – она не сливает воду полностью и аварийно останавливается. Признаки: после завершения стирки в баке остаётся вода, могут появляться ошибки уровня воды. Решается замена прессостата.
+                  Если ��атчик неправильно определяет уровень воды, блок управления не срабатывает нормально. При этом машинка может «зависать» перед отжимом – она не сливает воду полностью и аварийно останавливается. Признаки: после завершения стирки в баке ост��ётся вода, могут появляться ошибки уровня воды. Решается замена прессостата.
                 </p>
               </div>
             </section>
@@ -497,7 +508,7 @@ const Page = (props) => {
                     loading="lazy"
                     className="page-image38230525"
                   />
-                  <span className="page-text48">Соскочивший ремень</span>
+                  <span className="page-text48">Соскочивший ре��ень</span>
                 </figure>
                 <p className="vicetext">
                   {' '}
@@ -790,9 +801,7 @@ const Page = (props) => {
                     <strong className="page-text60">+38 (048) 123-35-21</strong>
                   </div>
                 </div>
-                <button type="button" className="page-button button">
-                  Перезвоните мне
-                </button>
+                <OrderButton onClick={openModal} text="Заказать мастера" />
               </div>
             </section>
             <PageNavigation
@@ -895,7 +904,7 @@ const Page = (props) => {
               </div>
               <div className="page-frame12983">
                 <span className="page-text75">
-                  Почему стиралка воняет — 7 быстрых причин и что сделать прямо
+                  Почему ст��ралка воняет — 7 быстрых причин и что сделать прямо
                   сейчас
                 </span>
                 <div className="page-container47"></div>
@@ -923,6 +932,7 @@ const Page = (props) => {
           </div>
         </main>
         <MainFooter />
+        <OrderModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
       <style jsx>
         {`

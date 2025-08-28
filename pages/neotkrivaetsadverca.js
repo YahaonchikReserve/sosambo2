@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
 
 import Header from '../components/Header'
 import MainFooter from '../components/MainFooter'
 import SEOHead from '../components/SEOHead'
 import PageNavigation from '../components/PageNavigation'
+import OrderButton from '../components/OrderButton'
+import OrderModal from '../components/OrderModal'
 import { getSEOData } from '../utils/seoConfig'
 import { getProblemPageStructuredData } from '../utils/structuredData'
 
 const Page = (props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
   const seoData = getSEOData('/neotkrivaetsadverca')
   const baseUrl = 'https://remstirmash.od.ua'
   const structuredData = getProblemPageStructuredData(
@@ -284,7 +295,7 @@ const Page = (props) => {
                 </figure>
                 <p className="vicetext">
                   {' '}
-                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка в�� время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит ��оответствующая пиктограмма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимите защиту.
+                  Многие модели оснащены функцией «Child Lock», которая предотвращает случайное открытие люка в�� время работы. Если эта блокировка активна, дверца не откроется, и на панели обычно горит ��оответствующая пиктограмма. В таком случае нужно отключить функцию в соответствии с инструкцией к вашей модели — не пытайтесь тянуть дверцу силой, сначала снимит�� защиту.
                 </p>
               </div>
             </section>
@@ -359,7 +370,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text46 vicetext">
                   {' '}
-                  ��сли слив заблокирован — засорился фильтр, дренажный шланг или сифон — вода остаётся в баке и люк удерживается запертым. Аналогично, при поломке датчика уровня система может «думать», что вода есть, даже если её визуально нет, и не снимать блокировку. В таких случаях необходима проверка и очистка сливного тракта или диагностика датчика
+                  ��сли слив заблокирован — засорился фильтр, дренажный шланг или сифон — вода остаётся в баке и люк удерживается запертым. Аналоги��но, при поломке датчика уровня система может «думать», что вода есть, даже если её визуально нет, и не снимать блокировку. В таких случаях необходима проверка и очистка сливного тракта или диагностика датчика
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -403,7 +414,7 @@ const Page = (props) => {
                 </figure>
                 <p className="page-text49 vicetext">
                   {' '}
-                  Внезапные перебои с питанием или ошибки в модуле управления могут приводить к «замораживанию» замка люка: контроллер просто не получает и��и не обрабатывает команду н�� разблокир��вку. Иногда помогает полная перезагрузка питания, в иных случаях требуется диагностика и ремонт электронной части в сервисном центре.
+                  Внезапные перебои с питанием или ошибки в модуле управления могут приводить к «замораживанию» замка люка: контроллер просто не получает и��и не обрабатывает команду н�� разблокир��в��у. Иногда помогает полная перезагрузка питания, в иных случаях требуется диагностика и ремонт электронной час��и в сервисном центре.
                   <span
                     dangerouslySetInnerHTML={{
                       __html: ' ',
@@ -639,55 +650,19 @@ const Page = (props) => {
                     <strong className="page-text60">+38 (048) 123-35-21</strong>
                   </div>
                 </div>
-                <button type="button" className="page-button button">
-                  Перезвоните мне
-                </button>
+                <OrderButton onClick={openModal} text="Заказать мастера" />
               </div>
             </section>
-            <div className="page-container32">
-              <div className="page-container33">
-                <div className="page-container34">
-                  <svg
-                    width="1024"
-                    height="1024"
-                    viewBox="0 0 1024 1024"
-                    className="page-icon54"
-                  >
-                    <path
-                      d="M19 468L471 19q19-19 45.5-19T562 19l92 91q19 19 19 45.5T654 201L468 385h492q27 0 45.5 18.5T1024 449v128q0 26-18.5 45T960 641H467l187 185q19 18 19 45t-19 45l-92 91q-19 19-45.5 19t-45.5-19L19 559Q0 540 0 513.5T19 468"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                </div>
-                <div className="page-container35">
-                  <h4 className="page-text61">Предидущая</h4>
-                  <span className="page-text62">
-                    Стиральная машина не отжимает
-                  </span>
-                </div>
-              </div>
-              <div className="page-container36">
-                <div className="page-container37">
-                  <svg
-                    width="1024"
-                    height="1024"
-                    viewBox="0 0 1024 1024"
-                    className="page-icon56"
-                  >
-                    <path
-                      d="m1005 558l-452 448q-19 19-45.5 19t-45.5-19l-92-91q-19-18-19-45t19-45l186-184H64q-27 0-45.5-19T0 577V449q0-27 18.5-45.5T64 385h493L370 200q-19-19-19-45.5t19-45.5l92-91q19-18 45.5-18T553 18l452 449q19 19 19 45.5t-19 45.5"
-                      fill="currentColor"
-                    ></path>
-                  </svg>
-                </div>
-                <div className="page-container38">
-                  <h4 className="page-text63">��ледующ��я</h4>
-                  <span className="page-text64">
-                    Стиральная машина протекает
-                  </span>
-                </div>
-              </div>
-            </div>
+            <PageNavigation
+              prevPage={{
+                href: '/nenabiraetvodu',
+                title: 'Стиральная машина не набирает воду'
+              }}
+              nextPage={{
+                href: '/nekrutitbaraban',
+                title: 'Стиральная машина не крутит барабан'
+              }}
+            />
             <svg
               width="330"
               xmlns="http://www.w3.org/2000/svg"
@@ -764,7 +739,7 @@ const Page = (props) => {
               <span className="page-text72">Вам будет интересно:</span>
               <div className="page-frame12981">
                 <span className="page-text73">
-                  Ошибки, котор��е приводят к дорогостоящему ремонту (и как их
+                  Ошибк��, котор��е приводят к дорогостоящему ремонту (и как их
                   избежать)
                 </span>
                 <div className="page-container45"></div>
@@ -804,18 +779,9 @@ const Page = (props) => {
               </div>
             </section>
           </div>
-          <PageNavigation
-            prevPage={{
-              href: '/nenabiraetvodu',
-              title: 'Стиральная машина не набирает воду'
-            }}
-            nextPage={{
-              href: '/nekrutitbaraban',
-              title: 'Стиральная машина не крутит барабан'
-            }}
-          />
         </main>
         <MainFooter />
+        <OrderModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
       <style jsx>
         {`
