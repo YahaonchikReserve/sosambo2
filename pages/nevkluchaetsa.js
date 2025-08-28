@@ -268,7 +268,7 @@ const Page = (props) => {
             <section id="1" className="page-firstproblem">
               <div className="page-container12 zagolovkiskorobkoy">
                 <h2 className="zagolovki2">
-                  Что делать, если машина не крутит барабан:
+                  Что делать, если машина не включается:
                 </h2>
                 <svg
                   width="330"

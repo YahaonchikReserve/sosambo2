@@ -536,7 +536,7 @@ const Page = (props) => {
                 <figure className="page-container27">
                   <img
                     alt="двигатель"
-                    src="/10/asd.webp"
+                    src="/10/12345.webp"
                     loading="lazy"
                     className="page-image38230525"
                   />
